@@ -1,0 +1,38 @@
+<div class="card" *ngIf="(rows$ | async) as rows">
+  <div class="card-header">
+    <h5>{{rows.length}} {{modelName + 's' | titlecase}}</h5>
+    <div class="media w-100">
+      <img class="img-thumbnail mr-3 header-img" src="/assets/images/1x1.jpg" width="80px" height="1px"
+           alt="Generic placeholder image">
+      <div class="media-body">
+        <div class="row" organism-heading
+             [input]="{specRow: {columnHeadings: columnHeadings,columnWidths: columnWidths}}">
+          <div class="col-sm-1">
+            <h5>Action</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="scrollable">
+      <div class="row item" *ngFor="let row of rows" appScrollIntoView [itemId]="row.id">
+        <div class="card border border-primary w-100" id="item-card">
+          <div class="media w-100">
+            <img class="img-thumbnail mr-3 item-img" [src]="imageFilenameMatching(row.photoFilename,row.commonName)"
+                 alt="">
+            <div class="media-body">
+              <app-organism-row class="row mr-1"
+                                [input]="{specRow: {columns: columns,columnWidths: columnWidths}, dataRow: row}">
+                <div class="col-sm-1 text-right">
+                  <button class="btn btn-primary zoom" (click)="navigateTo(row)">Zoom</button>
+                </div>
+              </app-organism-row>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

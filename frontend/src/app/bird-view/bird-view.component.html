@@ -1,0 +1,95 @@
+<ng-container *ngIf="model$ | async as model">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="row">
+            <div class="col">
+              <img class="img-thumbnail img-fluid"
+                   [src]="imageFilenameMatching(model.photoFilename,model.commonName)"
+                   [alt]="model.commonName">
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+              <audio controls
+                     [style.visibility]="soundVisibility(model.soundClipFilename)"
+                     [src]="audioFilenameMatching(model.soundClipFilename, model.commonName)">
+              </audio>
+            </div>
+            <div class="w-100"></div>
+            <div class="col">
+              <h5>{{model.songDescription}}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="row">
+            <div class="col">
+              <h4>Common Name</h4>
+            </div>
+            <div class="w-100"></div>
+            <div class="col mb-2">
+              <h4 class="text-center">{{model.commonName}}</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4>Genus</h4>
+            </div>
+            <div class="col">
+              <h4>Average Size</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h5 class="text-center">{{model.genus}}</h5>
+            </div>
+            <div class="col">
+              <h5 class="text-center">{{model.size}}</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4>Species</h4>
+            </div>
+            <div class="col">
+              <h4>Habitat</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h5 class="text-center">{{model.species}}</h5>
+            </div>
+            <div class="col">
+              <h5 class="text-center">{{model.habitat}}</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <figure>
+              <img class="img-thumbnail img-fluid img-secondary"
+                   [src]="secondaryImageFilename()"
+                   [alt]="">
+                <figcaption class="text-center">{{model.femalePhotoType}}</figcaption>
+              </figure>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h4>Field Notes</h4>
+                </div>
+                <div class="w-100"></div>
+                <div class="col mt-2 mb-2">
+                  <h5 class="pre-line text-center">{{model.notes}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <app-organism-navigation [model]="model"></app-organism-navigation>
+  </div>
+</ng-container>

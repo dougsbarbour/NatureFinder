@@ -1,0 +1,19 @@
+.keyboard-btn {width:40px;}
+
+.tree-button {
+  height: 75px;
+  width: 75px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tree-button-text {
+  top: 25px;
+  position: relative;
+  font-size: smaller;
+  text-align: center !important;
+}

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+.pre-line {white-space: pre-line}
+
+body, .card, .img-thumbnail {
+  background-color: lightgreen;
+}
+
+.navbar, .card-footer, .organism-nav {
+  background-color: black;
+  z-index: 1;
+}
+/* This hides the broken image icon */
+img:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+  content: attr(alt);
+}

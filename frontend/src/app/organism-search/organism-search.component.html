@@ -1,0 +1,174 @@
+<div class="card">
+  <div class="card-header" id="showAllHeader">
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary" [routerLink]="['/' + modelNamePlural]" aria-controls="showAll"
+                [queryParams]="{ sortBy: sortBy }">
+          Show All
+        </button>
+      </div>
+      <div class="col" *ngFor="let key of availableSortByKeys[modelNameSingular]">
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" type="radio" [(ngModel)]="sortBy" [value]="key" [id]="key" required>
+          <label class="custom-control-label" [for]="key">Sort by {{splitCamelCase(key) | titlecase }}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="(allHabitats$ | async)?.length > 0 ">
+  <div class="card">
+    <div class="card-header" id="searchByHabitatHeader">
+      <button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#searchByHabitat"
+              aria-expanded="false" aria-controls="searchByHabitat">
+        Search By Habitat
+      </button>
+    </div>
+    <div class="collapse" id="searchByHabitat" aria-labelledby="searchByHabitatHeader" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row ml-5">
+          <div class="col" *ngFor="let habitat of allHabitats$ | async">
+            <a class="btn btn-primary" [routerLink]="['/' + modelNamePlural]"
+               [queryParams]="{ habitat: habitat, sortBy: sortBy }">
+              Find {{modelNamePlural | titlecase}} in a {{habitat}} habitat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="(allColors$ | async)?.length > 0">
+  <div class="card">
+    <div class="card-header" id="searchByColorHeader">
+      <button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#searchByColor"
+              aria-expanded="false" aria-controls="searchByColor">
+        Search By Prominent Color
+      </button>
+    </div>
+    <div class="collapse" id="searchByColor" aria-labelledby="searchByColorHeader" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row ml-5 colors">
+          <div class="col" *ngFor="let color of allColors$ | async">
+            <a class="btn btn-primary"
+               [style.border-color]="colorButtonBorder(color)"
+               [style.background-color]="colorButtonBackground(color)"
+               [routerLink]="['/' + modelNamePlural]"
+               [queryParams]="{ color: color, sortBy: sortBy }"
+               [innerHTML]="colorButtonText(color)"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<div class="card">
+  <div class="card-header" id="searchByLetterHeader">
+    <button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#searchByLetter"
+            aria-expanded="false" aria-controls="searchByLetter">
+      Search By Letter of Alphabet
+    </button>
+  </div>
+  <div class="collapse" id="searchByLetter" aria-labelledby="searchByLetterHeader" data-parent="#accordion">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <ng-container *ngFor="let ltr of allLetters; index as i">
+          <ng-container *ngIf="i == 13">
+            <div class="w-100 d-none d-lg-block"></div>
+          </ng-container>
+          <div class="col">
+            <a class="btn btn-primary keyboard-btn" [routerLink]="['/' + modelNamePlural]"
+               [queryParams]="{ commonNameWordStarting: ltr, sortBy: sortBy }">{{ltr}}</a>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header" id="searchByCommonNameHeader">
+    <button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#searchByCommonName"
+            aria-expanded="false" aria-controls="searchByCommonName">
+      Search By Common Name
+    </button>
+  </div>
+  <div class="collapse" id="searchByCommonName" aria-labelledby="searchByCommonNameHeader"
+       data-parent="#accordion">
+    <div class="card-body">
+      <form #commonNameForm="ngForm" (ngSubmit)="onSubmit(commonNameForm.value)" class="ml-5">
+        <div class="form-group">
+          <label for="commonNameField"><h5>Common Name</h5></label>
+          <input type="text" class="form-control" id="commonNameField" required [(ngModel)]="model.commonName"
+                 name="commonName">
+        </div>
+        <button type="submit" class="btn btn-primary" id="commonNameSubmit">Search
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header" id="searchBySpeciesHeader">
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#searchBySpecies"
+            aria-expanded="false" aria-controls="searchBySpecies">
+      Search By Species
+    </button>
+  </div>
+  <div class="collapse" id="searchBySpecies" aria-labelledby="searchBySpeciesHeader"
+       data-parent="#accordion">
+    <div class="card-body">
+      <form #speciesForm="ngForm" (ngSubmit)="onSubmit(speciesForm.value)" class="ml-5">
+        <div class="form-group">
+          <label for="speciesField"><h5>Species</h5></label>
+          <input type="text" class="form-control" id="speciesField" required [(ngModel)]="model.species"
+                 name="species">
+        </div>
+        <button type="submit" class="btn btn-primary" id="speciesSubmit">Search
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header" id="searchByGenusHeader">
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#searchByGenus"
+            aria-expanded="false" aria-controls="searchByGenus">
+      Search By Genus
+    </button>
+  </div>
+  <div class="collapse" id="searchByGenus" aria-labelledby="searchByGenusHeader"
+       data-parent="#accordion">
+    <div class="card-body">
+      <form #genusForm="ngForm" (ngSubmit)="onSubmit(genusForm.value)" class="ml-5">
+        <div class="form-group">
+          <label for="genusField"><h5>Genus</h5></label>
+          <input type="text" class="form-control" id="genusField" required [(ngModel)]="model.genus"
+                 name="genus">
+        </div>
+        <button type="submit" class="btn btn-primary" id="genusSubmit">Search
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header" id="searchByFamilyHeader">
+    <button class="btn btn-primary" data-toggle="collapse" data-target="#searchByFamily"
+            aria-expanded="false" aria-controls="searchByFamily">
+      Search By Family
+    </button>
+  </div>
+  <div class="collapse" id="searchByFamily" aria-labelledby="searchByFamilyHeader"
+       data-parent="#accordion">
+    <div class="card-body">
+      <form #familyForm="ngForm" (ngSubmit)="onSubmit(familyForm.value)" class="ml-5">
+        <div class="form-group">
+          <label for="familyField"><h5>Family</h5></label>
+          <input type="text" class="form-control" id="familyField" required [(ngModel)]="model.family"
+                 name="family">
+        </div>
+        <button type="submit" class="btn btn-primary" id="familySubmit">Search
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

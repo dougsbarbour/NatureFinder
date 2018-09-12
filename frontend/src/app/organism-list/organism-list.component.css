@@ -1,0 +1,39 @@
+.scrollable {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  max-height: 66vh;
+  overflow-y: scroll;
+}
+
+.card-body {
+  margin-left: 0;
+}
+.card-header {
+  margin-left: 0;
+  height: 14vh;
+  overflow-y: hidden;
+}
+
+.item {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.header-img {
+  height: 0px !important;
+  width: 65px;
+  min-width: 65px;
+  visibility: hidden;
+}
+
+.item-img {
+  height: 80px !important;
+  width: 80px;
+  min-width: 80px;
+}
+
+.zoom {
+  height: 50px;
+  margin-top: 5px;
+}

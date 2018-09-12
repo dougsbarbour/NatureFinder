@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e30b8a9f-bb18-4047-b739-db746ae30080" name="Default" comment="Initial list tests and supporting code" />
+    <ignored mask="*.xls*" />
+    <ignored mask="id_rsa*" />
+    <ignored path="authorized_keys" />
+    <ignored path="backupGitRepo.bat" />
+    <manually-removed-from-ignored>
+      <directory path="frontend/src/assets/images/" />
+      <directory path="frontend/src/assets/audio/" />
+      <directory path="public/" />
+      <directory path="frontend/src/assets/video/" />
+    </manually-removed-from-ignored>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1781161475">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="29" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="6" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.17" value="7" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.opened" value="30" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Gemfile" value="28" />
+          <entry key="Ruby Console" value="333" />
+          <entry key="Vagrantfile" value="17" />
+          <entry key="css" value="2534" />
+          <entry key="csv" value="259" />
+          <entry key="erb" value="2540" />
+          <entry key="html" value="6160" />
+          <entry key="js" value="773" />
+          <entry key="json" value="488" />
+          <entry key="rb" value="4089" />
+          <entry key="scss" value="1044" />
+          <entry key="ts" value="19408" />
+          <entry key="txt" value="911" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="2534" />
+          <entry key="HTML" value="6173" />
+          <entry key="JSON" value="486" />
+          <entry key="JavaScript" value="769" />
+          <entry key="PLAIN_TEXT" value="1170" />
+          <entry key="RHTML" value="2540" />
+          <entry key="Ruby" value="4467" />
+          <entry key="SCSS" value="1044" />
+          <entry key="Scratch" value="4" />
+          <entry key="TypeScript" value="19395" />
+          <entry key="tsconfig" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Gemfile" value="10" />
+          <entry key="Procfile" value="1" />
+          <entry key="Rakefile" value="2" />
+          <entry key="Vagrantfile" value="6" />
+          <entry key="bootstrap" value="1" />
+          <entry key="css" value="39" />
+          <entry key="csv" value="10" />
+          <entry key="erb" value="6" />
+          <entry key="gitkeep" value="1" />
+          <entry key="html" value="154" />
+          <entry key="jpg" value="1" />
+          <entry key="js" value="120" />
+          <entry key="json" value="66" />
+          <entry key="log" value="3" />
+          <entry key="md" value="2" />
+          <entry key="rb" value="280" />
+          <entry key="scss" value="7" />
+          <entry key="ts" value="396" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="39" />
+          <entry key="HTML" value="154" />
+          <entry key="Image" value="1" />
+          <entry key="JSON" value="53" />
+          <entry key="JavaScript" value="120" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="RHTML" value="6" />
+          <entry key="Ruby" value="298" />
+          <entry key="SCSS" value="7" />
+          <entry key="Scratch" value="1" />
+          <entry key="TypeScript" value="396" />
+          <entry key="YAML" value="1" />
+          <entry key="tsconfig" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="Angular2LanguageService" value="28" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>**/*.ts</find>
+      <find>(&lt;any&gt;mockConfig)</find>
+      <find>'organism'</find>
+      <find>organism</find>
+      <find>bird</find>
+      <find>titlecase</find>
+      <find>title</find>
+      <find>testFormSubmission(modelNamePlural</find>
+      <find>testFormSubmission(modelNamePlural(modelNamePlural</find>
+      <find>testFormSubmission(modelName</find>
+      <find>testButtonPress(modelName</find>
+      <find>spec</find>
+      <find>organism-row</find>
+      <find>amp</find>
+      <find>modelName</find>
+      <find>ActivatedRoute</find>
+      <find>RouterTesting</find>
+      <find>ParamMap</find>
+      <find>injector</find>
+      <find>_getDependenciesMetadata</find>
+      <find>Oak</find>
+      <find>Amphi</find>
+      <find>: string;</find>
+      <find>Rake::Test</find>
+      <find>test</find>
+      <find>Family Latin String,Family English String</find>
+      <find>Habitat String</find>
+      <find>]</find>
+      <find>asset_common</find>
+      <find>photo_text2</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>h4</replace>
+      <replace>p</replace>
+      <replace>row&quot;</replace>
+      <replace>h5&gt;</replace>
+      <replace>h5</replace>
+      <replace>btn-primary</replace>
+      <replace>card</replace>
+      <replace>organism</replace>
+      <replace>specRow</replace>
+      <replace>btn tree-button</replace>
+      <replace>.png</replace>
+      <replace>btn btn-</replace>
+      <replace>&lt;/a&gt;</replace>
+      <replace>TreeSearchComponent</replace>
+      <replace>water</replace>
+      <replace>woods</replace>
+      <replace>open areas</replace>
+      <replace>org</replace>
+      <replace>&quot;</replace>
+      <replace>&quot;: &quot;&quot;</replace>
+      <replace>&quot;A String&quot;</replace>
+      <replace>mockConfig</replace>
+      <replace>modelName</replace>
+      <replace>testFormSubmission(modelNamePlural</replace>
+      <replace>testButtonPress(modelNamePlural</replace>
+      <replace>, @</replace>
+      <replace>&quot;Family Latin String,Family English String&quot;</replace>
+      <replace>&quot;Water,Woods&quot;</replace>
+      <replace>&quot;]</replace>
+      <replace>assert_common</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\doug\RubymineProjects\NatureFinder\config</dir>
+    </dirStrings>
+  </component>
+  <component name="GeneratorOptions">
+    <option name="VCS_SHOW_CONFIRMATION" value="true" />
+    <option name="ENVIRONMENT" value="development" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Doug Barbour" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/frontend/src/app/tree-list/tree-list.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/organism-search/organism-search.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/reptile-search/reptile-search.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/organism-heading/organism-heading.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/organism-row/organism-row.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/test/helpers/activated-route-stub.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/amphibian-view/amphibian-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/bird-view/bird-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/fish-view/fish-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/flower-view/flower-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/mammal-view/mammal-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/reptile-view/reptile-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/flower-view-map/flower-view-map.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/tree-view/tree-view.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/organism-navigation/organism-navigation.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/services/sharing.service.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/organism-navigation/organism-navigation.component.spec.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/directives/scroll-into-view.directive.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/directives/scroll-into-view.directive.spec.ts" />
+        <option value="$PROJECT_DIR$/app/models/organism.rb" />
+        <option value="$PROJECT_DIR$/test/fixtures/files/import.csv" />
+        <option value="$PROJECT_DIR$/test/models/organism_test.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/test/test_helper.rb" />
+        <option value="$PROJECT_DIR$/test/apis/query_api_test.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/trees_controller.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/amphibians_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/birds_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/fish_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/mammals_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/reptiles_controller.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/trees_controller_test.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/organisms_controller.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/fish_controller_test.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/flowers_controller_test.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/mammals_controller_test.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/reptiles_controller_test.rb" />
+        <option value="$PROJECT_DIR$/test/factories/organism.rb" />
+        <option value="$PROJECT_DIR$/test/factories/amphibians.rb" />
+        <option value="$PROJECT_DIR$/test/factories/tree.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/amphibians_controller_test.rb" />
+        <option value="$PROJECT_DIR$/test/factories/fish.rb" />
+        <option value="$PROJECT_DIR$/test/factories/flower.rb" />
+        <option value="$PROJECT_DIR$/test/factories/mammal.rb" />
+        <option value="$PROJECT_DIR$/test/factories/reptile.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/birds_controller_test.rb" />
+        <option value="$PROJECT_DIR$/test/factories/bird.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/flowers_controller.rb" />
+        <option value="$PROJECT_DIR$/test/factories/config.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/configs_controller_test.rb" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/frontend/package.json" />
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2026" />
+    <option name="y" value="-15" />
+    <option name="width" value="1731" />
+    <option name="height" value="1009" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="apis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="fixtures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="fixtures" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NatureFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NatureFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
+    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+    <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="titlecase&#9;null&#9;null&#10;RouterLink&#9;null&#9;null&#10;/assets&#9;FILE&#9;file://C:/Users/doug/RubymineProjects/NatureFinder/frontend/src/assets&#10;imageFilenameMatching&#9;null&#9;null&#10;raise_on_unfiltered_parameters&#9;null&#9;null&#10;common_name&#9;null&#9;null&#10;*64x64*&#9;null&#9;null&#10;64x64&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="javascript.karma.karma_node_package_dir" value="" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="C:\Users\doug\RubymineProjects\NatureFinder\frontend\node_modules\tslint" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Users\doug\RubymineProjects\NatureFinder\frontend\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\public\images" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\app\assets" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\frontend\src\app\models" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\frontend\src\app\services" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\app\models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\frontend\src\app\organism-search" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\public\audio" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\app\views\pages" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\public\video" />
+      <recent name="C:\Users\doug\RubymineProjects\NatureFinder\app\assets\javascripts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="IRB console.Rails console: NatureFinder">
+    <configuration name="Rails console: NatureFinder" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="NatureFinder" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console development" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All Karma Tests" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="$PROJECT_DIR$/frontend/src/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/frontend/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/frontend" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Javascript Development" type="JavascriptDebugType" factoryName="JavaScript Debug" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:4200/" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Prod-like Javascript Debug" type="JavascriptDebugType" factoryName="JavaScript Debug" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:3000" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Development Public" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="NatureFinder" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="192.168.0.101" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Development: untitled" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="untitled" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: untitled" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="untitled" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="NatureFinder" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="test" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: untitled" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="untitled" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: untitled" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="untitled" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All tests in app: NatureFinder" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="NatureFinder" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/frontend/src/app" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*,*_spec}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All tests in frontend: NatureFinder" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="NatureFinder" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/frontend" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*,*_spec}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All tests in src: NatureFinder" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="NatureFinder" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/frontend/src" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*,*_spec}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All tests in test: NatureFinder" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="NatureFinder" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/test" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*,*_spec}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Prod-like Javascript Debug" />
+      <item itemvalue="JavaScript Debug.Javascript Development" />
+      <item itemvalue="Karma.All Karma Tests" />
+      <item itemvalue="Rails.Test" />
+      <item itemvalue="Rails.Production: untitled" />
+      <item itemvalue="Rails.Development: untitled" />
+      <item itemvalue="Rails.Development Public" />
+      <item itemvalue="Rake.test: untitled" />
+      <item itemvalue="Rake.spec: untitled" />
+      <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in test: NatureFinder" />
+      <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in frontend: NatureFinder" />
+      <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in app: NatureFinder" />
+      <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in src: NatureFinder" />
+      <item itemvalue="IRB console.Rails console: NatureFinder" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="IRB console.Rails console: NatureFinder" />
+        <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in test: NatureFinder" />
+        <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in src: NatureFinder" />
+        <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in app: NatureFinder" />
+        <item itemvalue="Test::Unit/Shoulda/Minitest.All tests in frontend: NatureFinder" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
+  <component name="StructuralSearchPlugin">
+    <searchConfiguration name="user defined" created="1530218039830" text="ActiveRecord::Fixture::FormatError" recursive="true" caseInsensitive="true" type="XML" history="1" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e30b8a9f-bb18-4047-b739-db746ae30080" name="Default" comment="" />
+      <created>1530195181426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1530195181426</updated>
+      <workItem from="1530195182933" duration="437000" />
+      <workItem from="1530195698997" duration="14000" />
+      <workItem from="1530195904867" duration="16483000" />
+      <workItem from="1530281704390" duration="17797000" />
+      <workItem from="1530303570844" duration="4250000" />
+      <workItem from="1530533575011" duration="765000" />
+      <workItem from="1530537210172" duration="23000" />
+      <workItem from="1530537271047" duration="1317000" />
+      <workItem from="1530538700438" duration="2249000" />
+      <workItem from="1530547262583" duration="513000" />
+      <workItem from="1530547819904" duration="13226000" />
+      <workItem from="1530628128628" duration="19730000" />
+      <workItem from="1530660739123" duration="116000" />
+      <workItem from="1530710866400" duration="15124000" />
+      <workItem from="1530791034796" duration="21527000" />
+      <workItem from="1530880186919" duration="26978000" />
+      <workItem from="1530986286935" duration="7901000" />
+      <workItem from="1531158309849" duration="13339000" />
+      <workItem from="1531227755739" duration="21663000" />
+      <workItem from="1531398248677" duration="22361000" />
+      <workItem from="1531485705294" duration="18282000" />
+      <workItem from="1531599550724" duration="5748000" />
+      <workItem from="1531660570153" duration="21184000" />
+      <workItem from="1531742775444" duration="20695000" />
+      <workItem from="1531827320853" duration="7345000" />
+      <workItem from="1531840494839" duration="481000" />
+      <workItem from="1531842386292" duration="47000" />
+      <workItem from="1531843106354" duration="127000" />
+      <workItem from="1531843282016" duration="487000" />
+      <workItem from="1531843835779" duration="728000" />
+      <workItem from="1531845496703" duration="1151000" />
+      <workItem from="1531847749071" duration="144000" />
+      <workItem from="1531848626990" duration="197000" />
+      <workItem from="1531848913324" duration="2342000" />
+      <workItem from="1531852584886" duration="244000" />
+      <workItem from="1531853132762" duration="10868000" />
+      <workItem from="1531913137187" duration="13408000" />
+      <workItem from="1531959002688" duration="585000" />
+      <workItem from="1532003395492" duration="9638000" />
+      <workItem from="1532087003580" duration="14455000" />
+      <workItem from="1532175160866" duration="27986000" />
+      <workItem from="1532265825942" duration="8472000" />
+      <workItem from="1532274983470" duration="15238000" />
+      <workItem from="1532310166252" duration="31481000" />
+      <workItem from="1532373977760" duration="5901000" />
+      <workItem from="1532380184328" duration="8879000" />
+      <workItem from="1532433848548" duration="22109000" />
+      <workItem from="1532519518950" duration="71325000" />
+      <workItem from="1532692551526" duration="70000" />
+      <workItem from="1532692729808" duration="33205000" />
+      <workItem from="1532730500131" duration="4022000" />
+      <workItem from="1532805675204" duration="8230000" />
+      <workItem from="1532868338483" duration="70004000" />
+      <workItem from="1533039012417" duration="1717000" />
+      <workItem from="1533043278835" duration="42000" />
+      <workItem from="1533043373182" duration="20975000" />
+      <workItem from="1533124851485" duration="27701000" />
+      <workItem from="1533211669190" duration="29739000" />
+      <workItem from="1533299191495" duration="26514000" />
+      <workItem from="1533393786534" duration="12223000" />
+      <workItem from="1533486956315" duration="50063000" />
+      <workItem from="1533642656617" duration="12725000" />
+      <workItem from="1533736230842" duration="23479000" />
+      <workItem from="1533827303624" duration="11975000" />
+      <workItem from="1533909197891" duration="12507000" />
+      <workItem from="1534015688220" duration="253000" />
+      <workItem from="1534101222663" duration="4784000" />
+      <workItem from="1534193397424" duration="1656000" />
+      <workItem from="1534270080201" duration="32000" />
+      <workItem from="1534270170805" duration="25303000" />
+      <workItem from="1534364211961" duration="611000" />
+      <workItem from="1534422758693" duration="12624000" />
+      <workItem from="1534771319887" duration="38958000" />
+      <workItem from="1535462714953" duration="31073000" />
+      <workItem from="1535572596327" duration="3051000" />
+      <workItem from="1535578465584" duration="1866000" />
+      <workItem from="1535633025216" duration="2500000" />
+      <workItem from="1535635691262" duration="22861000" />
+      <workItem from="1536352749365" duration="29318000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial version with list working on all organisms and search working for birds and flowers.">
+      <created>1532274598047</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1532274598047</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial version with list working on all organisms and search working for birds and flowers.">
+      <created>1532275955060</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532275955060</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Search working for all">
+      <created>1532372153102</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532372153103</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Search working for all">
+      <created>1532373426972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532373426972</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Sample data for Heroku">
+      <created>1532380319842</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532380319842</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Heroku Procfile">
+      <created>1532382197395</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532382197395</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes to make production work">
+      <created>1532387314074</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532387314074</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes to make production work">
+      <created>1532389325218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1532389325218</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix production deployment issues">
+      <created>1532566197022</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1532566197023</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix production deployment issues">
+      <created>1532567005201</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532567005202</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix production deployment issues">
+      <created>1532567575230</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532567575230</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix production deployment issues">
+      <created>1532568345899</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1532568345899</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add individual views for each type of organism">
+      <created>1532728197966</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1532728197966</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix Firefox image width issue">
+      <created>1532735573385</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1532735573385</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add tree type icons">
+      <created>1532813640106</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1532813640107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add tree zoom; update most views">
+      <created>1532988823737</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1532988823737</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fix tree view in production">
+      <created>1532992053464</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1532992053464</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix mammal image height">
+      <created>1532993084025</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1532993084025</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fix mammal image height">
+      <created>1532993773278</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1532993773278</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add flower map location functionality plus bug fixes">
+      <created>1533159098544</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1533159098544</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add flower map locations admin functionality">
+      <created>1533244687700</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1533244687700</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add scrollIntoView functionality plus rearrange directories">
+      <created>1533325672263</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1533325672263</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add static pages and move angular part to /public/finder in production">
+      <created>1533505076870</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1533505076870</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Remove unused ExcelService">
+      <created>1533505372953</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1533505372953</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Fix CORS in production">
+      <created>1533505955502</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1533505955502</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fix CORS in production">
+      <created>1533506638632</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1533506638632</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fix CORS in production">
+      <created>1533508074026</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1533508074026</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fix CORS in production">
+      <created>1533508455173</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1533508455173</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fix /api path in production">
+      <created>1533512734165</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1533512734165</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fix /api path in production">
+      <created>1533558489967</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1533558489967</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fix asset path in production">
+      <created>1533560038494</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1533560038494</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Fix asset path in production">
+      <created>1533560414904</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1533560414904</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Fix scrolling">
+      <created>1533566011440</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1533566011440</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Fix api path in production">
+      <created>1533567176580</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1533567176580</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Fix home link">
+      <created>1533568134885</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1533568134885</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Search tests and bug fixes">
+      <created>1534431810858</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1534431810858</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Angular bug fixes">
+      <created>1534509704028</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1534509704028</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Angular bug fixes">
+      <created>1534513114080</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1534513114080</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Initial list tests and supporting code">
+      <created>1535036769192</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1535036769192</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Initial list tests and supporting code">
+      <created>1536693840617</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1536693840617</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_tests_in_test__NatureFinder - 2018.09.11 at 14h 52m 10s.xml">
+      <configuration name="All tests in test: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_frontend__NatureFinder - 2018.09.11 at 14h 52m 33s.xml">
+      <configuration name="All tests in frontend: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_frontend__NatureFinder - 2018.09.11 at 14h 53m 17s.xml">
+      <configuration name="All tests in frontend: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_app__NatureFinder - 2018.09.11 at 14h 53m 40s.xml">
+      <configuration name="All tests in app: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_src__NatureFinder - 2018.09.11 at 14h 53m 45s.xml">
+      <configuration name="All tests in src: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_src__NatureFinder - 2018.09.11 at 15h 03m 01s.xml">
+      <configuration name="All tests in src: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_src__NatureFinder - 2018.09.11 at 15h 04m 06s.xml">
+      <configuration name="All tests in src: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_src__NatureFinder - 2018.09.11 at 15h 11m 00s.xml">
+      <configuration name="All tests in src: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_Karma_Tests - 2018.09.11 at 15h 17m 43s.xml">
+      <configuration name="All Karma Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="All_tests_in_test__NatureFinder - 2018.09.11 at 15h 19m 46s.xml">
+      <configuration name="All tests in test: NatureFinder" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1045441000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2026" y="-15" width="1731" height="1009" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41046995" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32461873" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4871941" weight="0.33769062" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48748577" weight="0.28867102" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32748538" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32865497" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32748538" />
+      <window_info anchor="bottom" x="2190" y="27" width="1296" height="854" id="Terminal" order="10" type="WINDOWED" weight="0.44065484" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51251423" side_tool="true" weight="0.30994153" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.32865497" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.32974505" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="EXTERNAL C:/Users/doug/RubymineProjects/NatureFinder">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/frontend" />
+    </ignored-roots>
+    <MESSAGE value="Search working for all" />
+    <MESSAGE value="Sample data for Heroku" />
+    <MESSAGE value="Heroku Procfile" />
+    <MESSAGE value="Changes to make production work" />
+    <MESSAGE value="Fix production deployment issues" />
+    <MESSAGE value="Add individual views for each type of organism" />
+    <MESSAGE value="Fix Firefox image width issue" />
+    <MESSAGE value="Add tree type icons" />
+    <MESSAGE value="Add tree zoom; update most views" />
+    <MESSAGE value="Fix tree view in production" />
+    <MESSAGE value="Fix mammal image height" />
+    <MESSAGE value="Add flower map location functionality plus bug fixes" />
+    <MESSAGE value="Add flower map locations admin functionality" />
+    <MESSAGE value="Add scrollIntoView functionality plus rearrange directories" />
+    <MESSAGE value="Add static pages and move angular part to /public/finder in production" />
+    <MESSAGE value="Remove unused ExcelService" />
+    <MESSAGE value="Fix CORS in production" />
+    <MESSAGE value="Fix /api path in production" />
+    <MESSAGE value="Fix asset path in production" />
+    <MESSAGE value="Fix scrolling" />
+    <MESSAGE value="Fix api path in production" />
+    <MESSAGE value="Fix home link" />
+    <MESSAGE value="Search tests and bug fixes" />
+    <MESSAGE value="Angular bug fixes" />
+    <MESSAGE value="Initial list tests and supporting code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial list tests and supporting code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/mammals_controller.rb</url>
+          <line>12</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <condition expression="k == &quot;mapLocations&quot;" language="JavaScript" />
+          <url>mock://webpack:///./node_modules/xlsx/xlsx.js</url>
+          <line>19930</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>mock://webpack:///./node_modules/xlsx/xlsx.js</url>
+          <line>19932</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://webpack:///./node_modules/@angular/core/fesm5/testing.js</url>
+          <line>957</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>getComputedStyle(this.el.nativeElement).getPropertyValue('object-position').split(' ');</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>value.toLowerCase().split(', ').map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(', ');</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>return value.toLowerCase().split(', ').map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(', ');</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>instance.attributes.keys.collect(&amp;:to_s) +
+                  instance.acting_as.attributes.keys.collect(&amp;:to_s)</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result['Flower'].sort {|a,b|
+        index_a = in_order_months.index(a.downcase)
+        index_a = 0 if index_a.nil?
+        index_b = in_order_months.index(b.downcase)
+        index_b = 0 if index_b.nil?
+        index_b &lt;=&gt; index_a}</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result['Flower'].sort {|a,b|
+        index_a = in_order_months.index(a.downcase)
+        index_a = 0 if index_a.nil?
+        index_b = in_order_months.index(b.downcase)
+        index_b = 0 if index_b.nil?
+        index_a &lt;=&gt; index_b}</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result['Flower'].sort {|a,b|
+        index_a = in_order_months.index(a.downcase).to_i
+        index_b = in_order_months.index(b.downcase).to_i
+        index_a &lt;=&gt; index_b}</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result[key] = result[key].sort {|a,b|
+        index_a = in_order_months.index(a.downcase).to_i
+        index_b = in_order_months.index(b.downcase).to_i
+        index_a &lt;=&gt; index_b}</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Organism.all.inject(Set.new) do |set, each|
+      # regex below splits on commas
+      set.merge(each.habitat.scan(/,\s+(?=(?:(?:[^']*'){2})*[^']*$)/)) if each.habitat
+      set
+    end</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>row_hash['map_locations']</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>class_for_new_instance == Bird</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key == 'family'</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key == family</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>each.toLowerCase().split(' ').join('') == ''</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>each.toLowerCase().split(' ').join('') == '#'</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>each.nativeElement.children.length &gt; 0</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeof(each.nativeElement.innerHTML) != 'string'</expression-string>
+        <language-id>TypeScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>k == &quot;mapLocations&quot;</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key == :map_locations</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>JSON.parse(row_hash['map_locations'])</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parent.defined_traits</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parent</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>@amphibian.errors</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>@organism = Organism.find(params[:id])</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>permitted_params</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>base_params</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tree_params</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>{ tree: { common_name: @tree.common_name, genus: @tree.genus, leaf_position: @tree.leaf_position, leaf_structure: @tree.leaf_structure, leaf_type: @tree.leaf_type, tree_type: @tree.tree_type } }</expression-string>
+        <language-id>ruby</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/initializers/wrap_parameters.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/birds_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/fish_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/mammals_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/reptiles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/rack-test-1.1.0/lib/rack/mock_session.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/railties-5.2.0/lib/rails/engine.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="523" selection-start-line="523" selection-end-line="523" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/actionpack-5.2.0/lib/action_controller/metal/params_wrapper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="255" selection-start-line="255" selection-end-line="255" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/actionpack-5.2.0/lib/action_controller/metal/instrumentation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/actionpack-5.2.0/lib/action_controller/metal/rescue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/rack-test-1.1.0/lib/rack/test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/actionpack-5.2.0/lib/action_dispatch/testing/integration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/trees_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/fish_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/flowers_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="129" selection-start-line="14" selection-start-column="129" selection-end-line="14" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/mammals_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/reptiles_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="137" selection-start-line="14" selection-start-column="137" selection-end-line="14" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/trees_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/factory_bot-4.10.0/lib/factory_bot/strategy_syntax_method_registrar.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/factory_bot-4.10.0/lib/factory_bot/definition.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/factory_bot-4.10.0/lib/factory_bot/null_factory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/factory_bot-4.10.0/lib/factory_bot/factory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/factory_bot-4.10.0/lib/factory_bot/factory_runner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/organism.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.RubyMine2018.2/system/ruby_stubs/-461703475/-53980717/gems/activesupport-5.2.0/lib/active_support/callbacks.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="606" selection-start-line="606" selection-end-line="606" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/amphibians.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="60" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/fish.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/flower.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/mammal.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/reptile.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/tree.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/amphibians_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/birds_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/flowers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="29" column="96" selection-start-line="29" selection-start-column="96" selection-end-line="29" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/amphibians_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/bird.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/factories/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/amphibian_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/configs_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/apis/query_api_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1488">
+          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/flower_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/tree_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/models/organism_test.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ubuntu-xenial-16.04-cloudimg-console.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/organisms_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/organism.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="71" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/files/import.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GreenwayData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="215" selection-start-line="209" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

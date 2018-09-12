@@ -1,0 +1,28 @@
+<div class="card card-default" style="margin-top:10px;">
+  <div class="card-heading">
+    <h5>Search Flowers</h5>
+  </div>
+  <div class="card-body" style="position:relative">
+    <div class="accordion" id="accordion">
+      <div class="card">
+        <div class="card-header" id="searchByBloomingPeriodHeader">
+          <button class="btn btn-primary" data-toggle="collapse" data-target="#searchByBloomingPeriod"
+                  aria-expanded="false" aria-controls="searchByBloomingPeriod">
+            Search By Blooming Period
+          </button>
+        </div>
+        <div class="collapse" id="searchByBloomingPeriod" aria-labelledby="searchByBloomingPeriodHeader" data-parent="#accordion">
+          <div class="card-body">
+            <div class="row ml-5">
+              <div class="col" *ngFor="let bloomingPeriodMonth of allBloomingPeriodMonths | async">
+                <a class="btn btn-primary" [routerLink]="['/flowers']"
+                   [queryParams]="{ bloomingPeriod: bloomingPeriodMonth, sortBy: sortBy }">{{bloomingPeriodMonth | titlecase}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-organism-search [modelName]="'flower'"></app-organism-search>
+    </div>
+  </div>
+</div>

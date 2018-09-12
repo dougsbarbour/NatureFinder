@@ -1,0 +1,20 @@
+<ng-container *ngFor="let column of input.specRow.columns; let i = index">
+  <ng-container *ngIf="isArray(column)">
+    <div class="{{input.specRow.columnWidths[i].superWidth}}">
+      <app-organism-row class="row"
+                        [input]="{specRow: {columns: column, columnWidths: input.specRow.columnWidths[i].subWidths},
+                    dataRow: input.dataRow}"></app-organism-row>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="isString(column)">
+    <ng-container *ngIf="column === '@break@'">
+      <div class="w-100"></div>
+    </ng-container>
+    <ng-container *ngIf="column != '@break@'">
+      <div class="{{input.specRow.columnWidths[i]}}">
+        <h5 [id]="column + input.dataRow.id">{{input.dataRow[column]}}</h5>
+      </div>
+    </ng-container>
+  </ng-container>
+</ng-container>
+<ng-content></ng-content>

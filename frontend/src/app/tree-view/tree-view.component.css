@@ -1,0 +1,15 @@
+.zoom-image {
+  height: 25vh;
+  min-height: 25vh;
+  width: 100%;
+  object-fit: contain;
+}
+.zoomed-image {
+  width: 50vw;
+  height: 75vh;
+  object-fit: contain;
+}
+
+.tree-types {
+  font-size: smaller;
+}

@@ -1,0 +1,28 @@
+<div class="card card-default" style="margin-top:10px;">
+  <div class="card-heading">
+    <h5>Search Birds</h5>
+  </div>
+  <div class="card-body" style="position:relative">
+    <div class="accordion" id="accordion">
+      <div class="card">
+        <div class="card-header" id="searchBySizeHeader">
+          <button class="btn btn-primary" data-toggle="collapse" data-target="#searchBySize"
+                  aria-expanded="false" aria-controls="searchBySize">
+            Search By Size
+          </button>
+        </div>
+        <div class="collapse" id="searchBySize" aria-labelledby="searchBySizeHeader" data-parent="#accordion">
+          <div class="card-body">
+            <div class="row ml-5">
+              <div class="col" *ngFor="let size of allSizes | async">
+                <a class="btn btn-primary" [routerLink]="['/birds']"
+                   [queryParams]="{ size: size.queryValue, sortBy: sortBy }">{{size.displayValue}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-organism-search [modelName]="'bird'"></app-organism-search>
+    </div>
+  </div>
+</div>

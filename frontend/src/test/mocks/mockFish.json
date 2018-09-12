@@ -1,0 +1,17 @@
+[{
+  "id": 1,
+  "commonName": "A String1",
+  "genus": "A String2",
+  "species": "A String3",
+  "familyLatin": "A String4",
+  "familyEnglish": "A String5",
+  "color": "A String6",
+  "habitat": "A String7",
+  "photoFilename": "A String8",
+  "photoText1": "A String9",
+  "photoText2": "A String10",
+  "photoDate": "A String11",
+  "videoFilename": "A String12",
+  "notes": "A String13",
+  "size": "A String14"
+}]

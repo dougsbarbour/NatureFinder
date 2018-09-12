@@ -1,0 +1,40 @@
+<div class="container-fluid main">
+  <nav class="navbar navbar-expand-sm navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse active" id="navbarSupportedContent">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="/" [class.active]="router.isActive('/',true)">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/amphibians/search" [class.active]="router.isActive('/amphibians',false)">Amphibians</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/birds/search" [class.active]="router.isActive('/birds',false)">Birds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/fish/search" [class.active]="router.isActive('/fish',false)">Fish</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/flowers/search" [class.active]="router.isActive('/flowers',false)">Flowers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/mammals/search" [class.active]="router.isActive('/mammals',false)">Mammals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reptiles/search" [class.active]="router.isActive('/reptiles',false)">Reptiles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/trees/search" [class.active]="router.isActive('/trees',false)">Trees</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid router-outlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>

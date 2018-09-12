@@ -1,0 +1,64 @@
+.pre-line {white-space: pre-line}
+img {
+  object-fit: contain;
+}
+.card-img-top {
+  max-height: 65vh;
+  max-width: 100%;
+}
+.btn {
+  display: table;
+  border-radius: 1rem;
+  white-space: pre-wrap;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-repeat: repeat-x;
+}
+.btn text {
+  display: table-cell;
+  vertical-align: middle;
+}
+.welcome-btn {
+  height: 21vh;
+  width: 21vh;
+  font-size: 4vh;
+}
+.info-btn {
+  height: 15vh;
+  width: 15vh;
+  margin-bottom: 1rem;
+  font-size: smaller;
+}
+.credits-btn {
+  height: 8vh;
+  width: 7vh;
+}
+.dangers-btn {
+  height: 8vh;
+  width: 8vh;
+}
+.search-btn {
+  height: 12vh;
+  width: 25vh;
+  margin-bottom: 1rem;
+  border-radius: 6vh;
+  font-size: 3.5vh;
+  line-height: 95%;
+}
+.nav-btn {
+  height: 10vh;
+  width: 10vh;
+  margin-top: 0;
+  padding-top: 0;
+}
+.bottom-nav {
+  bottom: 100vh;
+  height: 12vh;
+  overflow-y: hidden;
+}
+.full-page-card-body {
+  height: 87vh;
+  overflow-y: scroll;
+}
+.card-img-top {
+  text-align: center;
+}

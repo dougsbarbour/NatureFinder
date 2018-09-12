@@ -1,0 +1,20 @@
+<ng-container *ngFor="let heading of input.specRow.columnHeadings; let i = index">
+  <ng-container *ngIf="isArray(heading)">
+    <div class="{{input.specRow.columnWidths[i].superWidth}}">
+      <div class="row" organism-heading
+           [input]="{specRow: {columnHeadings: heading, columnWidths: input.specRow.columnWidths[i].subWidths}}">
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="isString(heading)">
+    <ng-container *ngIf="heading === '@break@'">
+      <div class="w-100"></div>
+    </ng-container>
+    <ng-container *ngIf="heading != '@break@'">
+      <div class="{{input.specRow.columnWidths[i]}}">
+        <h5 [id]="heading.toLowerCase().split(' ').join('')">{{heading}}</h5>
+      </div>
+    </ng-container>
+  </ng-container>
+</ng-container>
+<ng-content></ng-content>

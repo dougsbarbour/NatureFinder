@@ -1,0 +1,100 @@
+<div class="card card-default" style="margin-top:10px;">
+  <div class="card-heading">
+    <h5>Search Trees</h5>
+  </div>
+  <div class="card-body" style="position:relative">
+    <div class="accordion" id="accordion">
+      <div class="card">
+        <div class="card-header" id="searchByTreeAttrsHeader">
+          <button class="btn btn-primary" data-toggle="collapse" data-target="#searchByTreeAttrs"
+                  aria-expanded="false" aria-controls="searchByTreeAttrs">
+            Search By Tree Attributes
+          </button>
+        </div>
+        <div class="collapse" id="searchByTreeAttrs" aria-labelledby="searchByTreeAttrsHeader" data-parent="#accordion">
+          <div class="card-body">
+            <div class="row ml-5">
+              <div class="row w-100">
+                <div class="col">
+                  <h5>Tree Type</h5>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.deciduousTreeTypeIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ treeType: tree.deciduousTreeTypeValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Deciduous</span></button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.evergreenTreeTypeIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ treeType: tree.evergreenTreeTypeValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Evergreen</span></button>
+                </div>
+              </div>
+              <div class="row w-100">
+                <div class="col">
+                  <h5>Leaf Position</h5>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.oppositeLeafPositionIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ leafPosition: tree.oppositeLeafPositionValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Opposite</span></button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.alternateLeafPositionIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ leafPosition: tree.alternateLeafPositionValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Alternate</span></button>
+                </div>
+              </div>
+              <div class="row w-100">
+                <div class="col">
+                  <h5>Leaf Structure</h5>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.simpleLeafStructureIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ leafStructure: tree.simpleLeafStructureValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Simple</span></button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.compoundLeafStructureIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ leafStructure: tree.compoundLeafStructureValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Compound</span></button>
+                </div>
+              </div>
+              <div class="row w-100">
+                <div class="col">
+                  <h5>Leaf Type</h5>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.broadLeafTypeIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ leafType: tree.broadLeafTypeValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Broad Leaf</span></button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary tree-button"
+                          [style.background-image]="'url(' + tree.needleLeafTypeIconFilename() + ')'"
+                          [routerLink]="['/trees']"
+                          [queryParams]="{ leafType: tree.needleLeafTypeValue(), sortBy: sortBy }">
+                    <span class="tree-button-text">Needle</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-organism-search [modelName]="'tree'"></app-organism-search>
+    </div>
+  </div>
+</div>
