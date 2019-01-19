@@ -1,16 +1,84 @@
-[{
-  "id": 1,
-  "commonName": "A String1",
-  "genus": "A String2",
-  "species": "A String3",
-  "familyLatin": "A String4",
-  "familyEnglish": "A String5",
-  "color": "A String6",
-  "habitat": "A String7",
-  "photoFilename": "A String8",
-  "photoText1": "A String9",
-  "photoText2": "A String10",
-  "photoDate": "A String11",
-  "videoFilename": "A String12",
-  "notes": "A String13"
-}]
+{
+  "included": [
+    {
+      "id": 2,
+      "type": "medium",
+      "attributes": {
+        "fileName": "A String1",
+        "tagName": "A String2",
+        "title": "A String3",
+        "caption": "A String4",
+        "credits": "A String5"
+      }
+    },
+    {
+      "id": 3,
+      "type": "medium",
+      "attributes": {
+        "fileName": "A String1",
+        "tagName": "A String2",
+        "title": "A String3",
+        "caption": "A String4",
+        "credits": "A String5"
+      }
+    },
+    {
+      "id": 4,
+      "type": "mapLocation",
+      "attributes": {
+        "xPercentage": "0.0",
+        "yPercentage": "0.0"
+      }
+    },
+    {
+      "id": 5,
+      "type": "mapLocation",
+      "attributes": {
+        "xPercentage": "1.0",
+        "yPercentage": "1.0"
+      }
+    }
+  ],
+  "data": [
+    {
+      "id": 1,
+      "type": "organism",
+      "attributes": {
+        "commonName": "A String1",
+        "scientificName": "A String2",
+        "habitatDescription": "A String3",
+        "quickFacts": "A String4",
+        "color": "A String6",
+        "habitat": "A String7",
+        "season": "A String8",
+        "notes": "A String13"
+      },
+      "relationships": {
+        "media": {
+          "data": [
+            {
+              "id": 2,
+              "type": "medium"
+            },
+            {
+              "id": 3,
+              "type": "medium"
+            }
+          ]
+        },
+        "mapLocations": {
+          "data": [
+            {
+              "id": 4,
+              "type": "mapLocation"
+            },
+            {
+              "id": 5,
+              "type": "mapLocation"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

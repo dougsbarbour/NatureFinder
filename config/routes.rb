@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     resources :fish
     resources :trees
     resources :flowers
+    resources :insects
     resources :organisms
-    get '/trees/:id/zoom/*path' => 'trees#show'
-    get '/flowers/:id/map' => 'flowers#show'
+    post 'authenticate', to: 'authentication#authenticate'
   end
 
   get '/import' => 'organisms#import'

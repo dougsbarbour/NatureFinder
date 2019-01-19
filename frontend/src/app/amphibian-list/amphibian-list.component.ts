@@ -9,12 +9,12 @@ import {Amphibian} from "../models/amphibian";
 })
 export class AmphibianListComponent extends OrganismListComponent {
 
-  public columns = [['commonName', 'genus', 'familyLatin', '@break@', 'habitat', 'species', 'familyEnglish'], 'notes'];
-  public columnHeadings = [['Common Name', 'Genus', 'Family', '@break@', 'Habitat', 'Species', ''], 'Additional Info'];
+  public columns = [['commonName', 'habitat', '@break@', 'scientificName'], 'notes'];
+  public columnHeadings = [['Common Name', 'Habitat', '@break@', 'Scientific Name'], 'Additional Info'];
   public columnWidths = [
     {
       superWidth: 'col-sm-8',
-      subWidths: ['col-sm-5', 'col-sm-3', 'col-sm-4', 'w-100', 'col-sm-5', 'col-sm-3', 'col-sm-4']
+      subWidths: ['col-sm-6', 'col-sm-6', 'w-100', 'col-sm-6', 'col-sm-6']
     },
     'col-sm-3 pre-line'
   ];
@@ -22,6 +22,6 @@ export class AmphibianListComponent extends OrganismListComponent {
   ngOnInit() {
     this.modelName = 'amphibian';
     super.ngOnInit();
-    this.setRowsObservable(each => new Amphibian(each));
+    this.setRowsObservable((each, included) => new Amphibian(each, included));
   }
 }

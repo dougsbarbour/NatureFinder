@@ -1,0 +1,45 @@
+<div class="card h-100">
+  <div class="main-page">
+    <div class="card-body h-100">
+      <div [class]="mapContainerClasses()">
+        <canvas [class]="canvasClasses()" #mapCanvas></canvas>
+      </div>
+      <ng-container *ngIf="model$ | async as model">
+        <div class="card border-primary rounded flower-details">
+          <h6 class="card-header common-name">{{model.commonName}}</h6>
+          <div class="row notes">
+            <div class="col notes">
+              <p>{{model.notes}}</p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap h-100 card-img-bottom-container">
+            <img class="card-img-bottom"
+                 [src]="imageFilenameMatching(model.photoFilename,model.commonName)"
+                 [alt]="">
+          </div>
+        </div>
+      </ng-container>
+      <div class="btn-group-vertical admin-btn-group">
+        <ng-container *ngIf="isLoggedIn()">
+          <button class="btn btn-success capture-map-locations-btn" (click)="captureMapLocations()">Admin</button>
+        </ng-container>
+        <ng-container *ngIf="inCapturePointsMode">
+          <button class="btn btn-success capture-map-locations-btn" (click)="addMapPoint()">Add Point</button>
+          <button class="btn btn-success capture-map-locations-btn" (click)="removeLastMapPoint()">Remove Last Point
+          </button>
+          <button class="btn btn-success capture-map-locations-btn" (click)="endCaptureMapLocationsSave()">Save & Exit
+          </button>
+          <button class="btn btn-success capture-map-locations-btn" (click)="endCaptureMapLocationsNoSave()">Exit No
+            Save
+          </button>
+          <button class="btn btn-success capture-map-locations-btn" (click)="downloadPointsFile()">Download</button>
+        </ng-container>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <ng-container *ngIf="model$ | async as model">
+        <app-organism-navigation [model]="model"></app-organism-navigation>
+      </ng-container>
+    </div>
+  </div>
+</div>

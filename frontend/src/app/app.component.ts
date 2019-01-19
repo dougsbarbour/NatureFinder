@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
+import {AuthService} from "./services/auth.service";
 
 
 @Component({
@@ -10,7 +11,16 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class AppComponent {
   title = 'app';
 
-  constructor(public router: Router) {
+  constructor(public router: Router, private  authService: AuthService) {
 
   }
+
+  isLoggedIn() {
+    return (this.authService.isLoggedIn());
+  }
+
+  logout() {
+    this.authService.logout();
+  }
+
 }

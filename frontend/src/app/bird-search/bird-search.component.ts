@@ -17,7 +17,7 @@ export class BirdSearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.allSizes = this.apiService.config.pipe(map(config => config.allSizes['bird']));
+    this.allSizes = this.apiService.config.pipe(map(config => config.data.attributes.allSizes['bird']));
   }
 
   public get sortBy() {

@@ -8,7 +8,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -33,9 +33,8 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-end
-
-group :development do
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
 
 group :development, :test do
@@ -51,5 +50,10 @@ gem 'active_record-acts_as'
 gem 'acts_as_singleton'
 gem 'olive_branch'
 gem 'high_voltage', '~> 3.1'
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt'
+gem 'simple_command'
+gem "facets", require: false
+gem 'fast_jsonapi'

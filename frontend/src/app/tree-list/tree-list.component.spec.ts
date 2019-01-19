@@ -1,50 +1,42 @@
-import {async, TestBed} from '@angular/core/testing';
 import {TreeListComponent} from './tree-list.component';
-import {HttpTestingController} from '@angular/common/http/testing';
 import {
-  component,
-  fixture, imports,
-  initializeComponent,
-  setFixture,
-  shouldHaveAllFieldValues, shouldHaveAllHeadingValues,
-  standardDeclarations
+  fixture,
+  setupBeforeAndAfter,
+  shouldHaveAllHeadingValues,
 } from "../../test/helpers/listTestHelpers";
-import * as jsonDomainObjects from '../../test/mocks/mockTrees.json';
-import {flatten} from "../dsb-utils";
+import * as jsonDomainObjects from '../../test/mocks/mockOrganisms.json';
 import {By} from "@angular/platform-browser";
 import {Tree} from "../models/tree";
-
-let mockDomainObjects = (<any>jsonDomainObjects);
+import {SharingService} from "../services/sharing.service";
 
 describe('TreeListComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: imports('trees', TreeListComponent),
-      declarations: [TreeListComponent].concat(standardDeclarations)
-    })
-      .compileComponents();
-    setFixture(TestBed.createComponent(TreeListComponent));
-    initializeComponent('trees', fixture.componentInstance, mockDomainObjects);
-  }));
-  afterEach(() => {
-    TestBed.get(HttpTestingController).verify();
+
+  setupBeforeAndAfter('trees', TreeListComponent,  () => {
+    let mockDomainObjects = (<any>jsonDomainObjects);
+    mockDomainObjects.data[0].attributes.treeType = 'd';
+    mockDomainObjects.data[0].attributes.leafPosition = 'o';
+    mockDomainObjects.data[0].attributes.leafStructure = 's';
+    mockDomainObjects.data[0].attributes.leafType = 'b';
+    return (mockDomainObjects);
   });
+
   it('should have all heading values', () => {
     shouldHaveAllHeadingValues();
   });
-  it('should have all field values', () => {
-    let columns = ['commonName', 'genus'];
+  it('should have all field values', function() {
+    let columns = ['commonName', 'scientificName'];
+    let refMap = (new SharingService(undefined)).getIncludedMap(this.mocksArray.included);
     columns.forEach(each => {
-      let fieldValue = fixture.debugElement.query(By.css(`#${each}${mockDomainObjects[0].id}`))
+      let fieldValue = fixture.debugElement.query(By.css(`#${each}${this.mocksArray.data[0].id}`))
         .nativeElement.textContent.trim();
-      expect(fieldValue).toEqual(mockDomainObjects[0][each]);
+      expect(fieldValue).toEqual(this.mocksArray.data[0].attributes[each]);
     });
     let icons = [['treeType', 'iconForTreeType'], ['leafPosition', 'iconForLeafPosition'],
       ['leafStructure', 'iconForLeafStructure'], ['leafType', 'iconForLeafType']];
     icons.forEach(each => {
-      let srcValue = fixture.debugElement.query(By.css(`#${each[0]}${mockDomainObjects[0].id}`))
+      let srcValue = fixture.debugElement.query(By.css(`#${each[0]}${this.mocksArray.data[0].id}`))
         .nativeElement.src;
-      expect(srcValue).toContain(mockDomainObjects.map(each => new Tree(each))[0][each[1]]());
+      expect(srcValue).toContain(this.mocksArray.data.map(each => new Tree(each,refMap))[0][each[1]]());
     });
   });
 });

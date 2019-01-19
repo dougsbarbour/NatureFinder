@@ -5,7 +5,6 @@ export class Bird extends Organism {
   public soundClipFilename: string;
   public songDescription: string;
   public _size: string;
-  public femalePhotoType: string;
 
   pluralClassName() {
     return ('Birds')

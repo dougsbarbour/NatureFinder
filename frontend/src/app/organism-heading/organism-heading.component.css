@@ -1,0 +1,21 @@
+
+.noSort {
+  background: url('../../assets/images/1x1.png') no-repeat -1px -1px;
+  width: 1px;
+  height: 1px;
+
+}
+.sortAsc {
+  background: url('../../assets/images/sprite-small2018-R1.png') no-repeat -329px -321px;
+  width: 11px;
+  height: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sortDesc {
+  background: url('../../assets/images/sprite-small2018-R1.png') no-repeat -403px -217px;
+  width: 11px;
+  height: 6px;
+  display: inline-block;
+}

@@ -1,67 +1,63 @@
-<div class="card" *ngIf="rows$ | async as rows">
-  <div class="card-header">
-    <div class="row item">
-      <h5>{{rows.length}} {{modelName + 's' | titlecase}}</h5>
-      <div class="card w-100">
-        <div class="media">
-          <img class="img-thumbnail mr-3" src="/assets/images/1x1.jpg" width="80px" height="1px"
-               alt="Generic placeholder image" [style.visibility]="'hidden'">
-          <div class="media-body">
-            <div class="row" organism-heading
-                 [input]="{specRow: {columnHeadings: columnHeadings,columnWidths: columnWidths}}">
-              <div class="col-sm-1">
-                <h5>Action</h5>
+<div class="card card-default main">
+  <div class="main-page" *ngIf="rows$ | async as rows">
+    <div class="card-heading item-count">
+      <h3>{{rows.length}} {{modelName + 's' | titlecase}}</h3>
+    </div>
+    <div class="card heading item" [style.width.%]="99">
+      <div class="row w-100" organism-heading
+           [input]="{specRow: {columnHeadings: columnHeadings,columnWidths: columnWidths}, modelName: modelName}"
+           (sortBy)="sortBy($event)">
+      </div>
+    </div>
+    <div class="card-body scrollable">
+      <div class="card item border border-primary w-100" id="item-card" *ngFor="let row of rows" appScrollIntoView
+           [itemId]="row.id">
+        <div class="row w-100">
+          <div class="col-sm-1">
+            <img class="img-thumbnail mr-3 item-img"
+                 [src]="imageFilenameMatching(row.photoFilename,row.commonName)"
+                 (click)="navigateTo(row)"
+                 alt="">
+          </div>
+          <div class="col-sm-3">
+            <div class="row">
+              <div class="col-sm-12">
+                <h5 [id]="'commonName' + row.id">{{row.commonName}}</h5>
+              </div>
+              <div class="w-100"></div>
+              <div class="col-sm-12">
+                <h5 [id]="'scientificName' + row.id">{{row.scientificName}}</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="row">
+              <div class="col-sm-3 d-block text-center">
+                <img [src]="row.iconForTreeType()" [id]="'treeType' + row.id" [style.width.px]="95">
+              </div>
+              <div class="col-sm-3 d-block text-center">
+                <img [src]="row.iconForLeafPosition()" [id]="'leafPosition' + row.id">
+              </div>
+              <div class="col-sm-3 d-block text-center">
+                <img [src]="row.iconForLeafStructure()" [id]="'leafStructure' + row.id">
+              </div>
+              <div class="col-sm-3 d-block text-center">
+                <img [src]="row.iconForLeafType()" [id]="'leafType' + row.id">
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card-body">
-    <div class="scrollable">
-      <div class="row item" *ngFor="let row of rows">
-        <div class="card border border-primary w-100" id="item-card">
-          <div class="media w-100">
-            <img class="img-thumbnail" [src]="imageFilenameMatching(row.photoFilename,row.commonName)" width="80px"
-                 height="80px"
-                 alt="">
-            <div class="media-body">
-              <div class="row mr-1">
-                <div class="col-sm-4">
-                  <div class="col-sm-12">
-                    <h5 [id]="'commonName' + row.id">{{row.commonName}}</h5>
-                  </div>
-                  <div class="w-100"></div>
-                  <div class="col-sm-12">
-                    <h5 [id]="'genus' + row.id">{{row.genus}}</h5>
-                  </div>
-                </div>
-                <div class="col-sm-7">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <img [src]="row.iconForTreeType()" [id]="'treeType' + row.id">
-                    </div>
-                    <div class="col-sm-3">
-                      <img [src]="row.iconForLeafPosition()" [id]="'leafPosition' + row.id">
-                    </div>
-                    <div class="col-sm-3">
-                      <img [src]="row.iconForLeafStructure()" [id]="'leafStructure' + row.id">
-                    </div>
-                    <div class="col-sm-3">
-                      <img [src]="row.iconForLeafType()" [id]="'leafType' + row.id">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-1">
-                  <button class="btn btn-primary zoom" (click)="navigateTo(row)">Zoom</button>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="bottom-nav">
+      <div class="row">
+        <div class="col-sm-2">
+          <button class="btn btn-success org-nav-btn" onclick="window.location.href = '/';">Start over</button>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-success org-nav-btn" (click)="goBack()">Go Back</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-

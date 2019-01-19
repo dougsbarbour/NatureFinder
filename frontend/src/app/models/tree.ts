@@ -7,14 +7,6 @@ export class Tree extends Organism {
   public leafStructure: string;
   public leafType: string;
 
-  get family() {
-    return (this.familyLatin + (this.familyEnglish ? ', ' + this.familyEnglish : ""))
-  }
-
-  get genusSpecies() {
-    return (this.genus + (this.species ? ', ' + this.species : ""))
-  }
-
   static pluralClassName() {
     return ('Trees')
   }

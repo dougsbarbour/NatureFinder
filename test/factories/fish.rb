@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :fish, parent: :organism, class: Fish do
-    size 'small'
+    size { 'small' }
   end
 end

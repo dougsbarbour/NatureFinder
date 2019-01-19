@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
 import {SharingService} from "../services/sharing.service";
 import {Flower} from "../models/flower";
 import {charCount} from "../dsb-utils";
+import {AuthService} from "../services/auth.service";
 
 
 @Component({
@@ -11,14 +12,14 @@ import {charCount} from "../dsb-utils";
   styleUrls: ['./organism-navigation.component.css']
 })
 export class OrganismNavigationComponent implements OnInit {
-
+  @HostBinding() class='organism-nav';
   @Input() model;
   public navigationExtras: NavigationExtras = {
     queryParamsHandling: 'merge',
     relativeTo: this.route
   };
 
-  constructor(private router: Router, private route: ActivatedRoute, public shared: SharingService) {
+  constructor(private router: Router, private route: ActivatedRoute, public shared: SharingService, public auth: AuthService) {
   }
 
   ngOnInit() {
@@ -62,15 +63,17 @@ export class OrganismNavigationComponent implements OnInit {
   }
 
   goToMapLocationButtonVisibility() {
-    return (!this.shared.mapLocationButtonHidden && this.model instanceof Flower ? 'visible' : 'hidden')
+    return (!this.shared.mapLocationButtonHidden && (this.auth.isLoggedIn() || this.model.mapLocations.length) ? 'visible' : 'hidden')
   }
 
   isGoBackButtonAvailable() {
-    return (['/zoom', '/map'].some((v) => this.router.url.indexOf(v) >= 0))
+    return (true);
+    // return (['/zoom', '/map'].some((v) => this.router.url.indexOf(v) >= 0))
   }
 
   isHomeButtonAvailable() {
-    return (!this.isGoBackButtonAvailable())
+    return (true);
+    // return (!this.isGoBackButtonAvailable())
   }
 
   returnToSearch() {
@@ -85,9 +88,9 @@ export class OrganismNavigationComponent implements OnInit {
     this.router.navigate([targetUrl, {id: this.model.id}], this.navigationExtras);
   }
 
-  zoomOut() {
-    let numberOfLevels = charCount(this.router.url, '/') - 2;
-    let targetUrl = '../'.repeat(numberOfLevels);
+  goBack() {
+    let numberOfLevels = charCount(this.router.url, '/') - 1;
+    let targetUrl = '../';
     this.router.navigate([targetUrl, {id: this.model.id}], this.navigationExtras);
   }
 
@@ -96,5 +99,18 @@ export class OrganismNavigationComponent implements OnInit {
     let queryParams = this.router.url.includes('?') ? '?' + this.router.url.split('?')[1] : "";
     this.router.navigateByUrl(baseUrl + '/map' + queryParams);
   }
+
+  logout() {
+    this.auth.logout();
+    this.router.navigateByUrl('./')
+  }
+
+  logoutButtonVisibility() {
+    if (this.auth.isLoggedIn())
+      return ('visible')
+    else
+      return ('hidden')
+  }
+
 }
 

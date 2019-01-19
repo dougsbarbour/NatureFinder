@@ -1,20 +1,21 @@
+import * as moment from "moment";
 export const baseImagePrefix = 'assets/images/';
 export const baseAudioPrefix = 'assets/audio/';
 export const baseVideoPrefix = 'assets/video/';
 
 export const splitCamelCase = (camelCase) => {
-  return (camelCase.replace(/([a-z])([A-Z])/, "$1 $2"));
+  return (camelCase.split(/(?=[A-Z])/).join(' '));
 };
 
 export const titlecase = (value) => {
-  return value.toLowerCase().split(' ').map(function (word) {
+  return value.toLowerCase().split(' ').map((word) => {
     return (word.charAt(0).toUpperCase() + word.slice(1));
   }).join(' ');
 };
 
 export const charCount = (str: string, chr: string) => {
   let result = 0;
-  for (let c of str) {if (c == chr) result ++};
+  for (let c of str) {if (c == chr) result ++}
   return(result);
 };
 
@@ -29,3 +30,24 @@ export const flatten = function(arr, result = []) {
   }
   return result;
 };
+
+export const authToken = function() {
+  return (localStorage.getItem('auth_token'));
+};
+
+export const authTokenExpiresAt = function() {
+  const expiration = localStorage.getItem("auth_token_expires_at");
+  const expiresAt = new Date(expiration);
+  return moment(expiresAt);
+};
+
+export const setAuthToken = function(data) {
+  localStorage.setItem('auth_token', data.authToken);
+  localStorage.setItem('auth_token_expires_at', data.expiresAt);
+};
+
+export const removeAuthToken = function() {
+  localStorage.removeItem("auth_token");
+  localStorage.removeItem("auth_token_expires_at");
+};
+

@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+div {
+  background-color: transparent !important;
+}
+body {
+  background-image: url(assets/images/ACS-Greenway-Emblem-4C.png);
+  background-blend-mode: lighten;
+  background-color: rgba(255,255,255,0.9);
+}
+
 .pre-line {white-space: pre-line}
 
-body, .card, .img-thumbnail {
-  background-color: lightgreen;
-}
-
-.navbar, .card-footer, .organism-nav {
-  background-color: black;
-  z-index: 1;
-}
 /* This hides the broken image icon */
 img:after {
   display: block;
@@ -17,10 +18,103 @@ img:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: lightgreen;
+  background-color: white;
   font-family: 'Helvetica';
   font-weight: 300;
   line-height: 2;
   text-align: center;
   content: attr(alt);
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  height: 5vh;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.navbar {
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.main-page {
+  height: 100%;
+  margin-bottom: 60px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.organism-nav {
+  width: 100%;
+}
+
+.bottom-nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  bottom: 0;
+  height: 50px;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.bottom-nav .row {
+  width: 100%;
+}
+
+.item-count {
+  margin-left: 10px;
+}
+
+.img-thumbnail {
+  max-height: 60vh;
+  max-width: 40vw;
+  min-width: 40vw;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+audio {
+  width: 90%;
+  max-width: 40vw
+}
+
+.audio-spacer {
+  display: block;
+  width: 100%;
+  max-height: 27vh;
+}
+
+button, .search-header, .item-count {
+  font-family: 'Sriracha', cursive;
+  color: darkorange !important;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+button {
+  font-size: 20px !important;
+}
+
+.search-header {
+  margin-left: 10px;
 }

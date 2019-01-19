@@ -4,7 +4,7 @@ import {ApiService} from "../services/api.service";
 import {Observable} from "rxjs/internal/Observable";
 import {map} from "rxjs/operators";
 import {DomSanitizer} from "@angular/platform-browser";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {SharingService} from "../services/sharing.service";
 import {splitCamelCase} from "../dsb-utils";
 
@@ -17,6 +17,7 @@ export class OrganismSearchComponent implements OnInit {
 
   public allColors$: Observable<any>;
   public allHabitats$: Observable<any>;
+  public allSeasons$: Observable<any>;
   public model: SearchModel = new SearchModel();
   public allLetters = Array.from('abcdefghijklmnopqrstuvwxyz');
   private defaultButtonBackgroundColor = 'tan';
@@ -24,37 +25,30 @@ export class OrganismSearchComponent implements OnInit {
   public modelNameSingular;
   public modelNamePlural;
 
-  constructor(public apiService: ApiService, public router: Router, private shared: SharingService, private sanitizer: DomSanitizer) {
+  constructor(public acRoute: ActivatedRoute, public apiService: ApiService, public router: Router,
+              private shared: SharingService, private sanitizer: DomSanitizer) {
+    this.modelName = this.acRoute.snapshot.data['modelName']
   }
 
   ngOnInit() {
-    if (typeof(this.modelName) == 'string') {
+    if (typeof (this.modelName) == 'string') {
       this.modelNameSingular = this.modelName;
       this.modelNamePlural = this.modelName + 's';
-    }
-    else {
+    } else {
       this.modelNameSingular = this.modelName['singular'];
       this.modelNamePlural = this.modelName['plural'];
     }
-    this.allColors$ = this.apiService.config.pipe(map(config => config.allColors[this.modelNameSingular]));
-    this.allHabitats$ = this.apiService.config.pipe(map(config => config.allHabitats[this.modelNameSingular]));
-    this.sortBy = 'commonName';
+    this.allColors$ = this.apiService.config.pipe(map(config => config.data.attributes.allColors[this.modelNameSingular]));
+    this.allHabitats$ = this.apiService.config.pipe(map(config => config.data.attributes.allHabitats[this.modelNameSingular]));
+    this.allSeasons$ = this.apiService.config.pipe(map(config => config.data.attributes.allSeasons[this.modelNameSingular]));
   }
 
   splitCamelCase(arg) {
     return (splitCamelCase(arg));
   }
 
-  public get sortBy() {
-    return (this.shared.sortBy)
-  }
-
-  public get availableSortByKeys() {
-    return (this.shared.availableSortByKeys)
-  }
-
-  public set sortBy(arg) {
-    this.shared.sortBy = arg
+  get sortBy() {
+    return(splitCamelCase(this.shared.availableSortByKeys[this.modelNameSingular][0]));
   }
 
   onSubmit(arg) {
@@ -83,7 +77,6 @@ export class OrganismSearchComponent implements OnInit {
     }
   }
 
-
   colorButtonText(color) {
     let result = "";
     let colors = this.splitColor(color);
@@ -104,5 +97,6 @@ export class OrganismSearchComponent implements OnInit {
   private splitColor(color) {
     return (color.split(/\/|-/));
   }
+
 }
 

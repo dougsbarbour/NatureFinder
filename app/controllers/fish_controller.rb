@@ -3,46 +3,19 @@ class FishController < OrganismsController
 
   # GET /fish
   def index
-    @fish = process_params(Fish.all)
-
-    render json: @fish
-  end
-
-  # GET /fish/1
-  def show
-    render json: @fish
-  end
-
-  # POST /fish
-  def create
-    @fish = Fish.new(fish_params)
-
-    if @fish.save
-      render json: @fish, status: :created, location: @fish
-    else
-      render json: @fish.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /fish/1
-  def update
-    if @fish.update(fish_params)
-      render json: @fish
-    else
-      render json: @fish.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /fish/1
-  def destroy
-    @fish.destroy
+    @organism = process_params(Fish.all)
+    render json: serializer.new(@organism, is_collection: true)
   end
 
   private
 
+  def serializer
+    FishSerializer
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_fish
-    @fish = Fish.find(params[:id])
+    @organism = Fish.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

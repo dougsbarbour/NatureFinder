@@ -1,40 +1,29 @@
 import {} from 'jasmine';
-import {ComponentFixture, TestBed} from "@angular/core/testing";
-import {DebugElement} from "@angular/core";
+import {async, ComponentFixture, fakeAsync, TestBed} from "@angular/core/testing";
+import {DebugElement, NO_ERRORS_SCHEMA} from "@angular/core";
 import {By} from "@angular/platform-browser";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {advance, click, newEvent} from "./testHelpers";
 import {RouterLinkDirectiveStub} from "./router-link-directive-stub";
 import {QueryParamsDirectiveStub} from "./query-params-directive-stub";
 import {ApiService} from "../../app/services/api.service";
-import {HttpTestingController} from "@angular/common/http/testing";
+import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {OrganismSearchComponent} from "../../app/organism-search/organism-search.component";
 import * as jsonConfig from '../mocks/mockConfig.json';
+import {ActivatedRouteStub} from "./activated-route-stub";
+
 let mockConfig = (<any>jsonConfig);
 
 export let fixture: ComponentFixture<any>;
-export let linkDes: DebugElement[];
-export let routerLinks;
-export let paramsDes: DebugElement[];
-export let queryParams;
+let linkDes: DebugElement[];
+let routerLinks;
+let paramsDes: DebugElement[];
+let queryParams;
 
 export function setFixture(arg) {
   fixture = arg
-}
-
-export function setLinkDes(arg) {
-  linkDes = arg
-}
-
-export function setRouterLinks(arg) {
-  routerLinks = arg
-}
-
-export function setParamsDes(arg) {
-  paramsDes = arg
-}
-
-export function setQueryParams(arg) {
-  queryParams = arg
 }
 
 export function initializeComponent(component) {
@@ -58,6 +47,35 @@ export function initializeComponent(component) {
   }));
 }
 
+export function setupBeforeAndAfter(componentClass) {
+  beforeEach(async(() => {
+    let component;
+    let routerSpy = jasmine.createSpyObj('Router', ['navigate']);
+
+    TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule,
+        HttpClientTestingModule,
+        FormsModule
+      ],
+      providers: [
+        ApiService,
+        {provide: ActivatedRoute, useClass: ActivatedRouteStub},
+        {provide: Router, useValue: routerSpy}
+      ],
+      declarations: [componentClass, OrganismSearchComponent,
+        RouterLinkDirectiveStub, QueryParamsDirectiveStub],
+      schemas: [NO_ERRORS_SCHEMA]
+    })
+      .compileComponents();
+    fixture = TestBed.createComponent(componentClass);
+    component = fixture.componentInstance;
+    initializeComponent(component);
+  }));
+  afterEach(() => {
+    TestBed.get(HttpTestingController).verify();
+  });
+}
 export function testButtonPresence(buttonLabels) {
   fixture.whenStable().then(() => {
     let btns = fixture.debugElement.queryAll(By.css('.btn'))
@@ -105,4 +123,53 @@ export function testFormSubmission(modelNamePlural, inputString, fieldId, submit
 
   expect(navArgs[0]).toEqual([`/${modelNamePlural}`]);
   expect(navArgs[1]).toEqual({queryParams: expectedQueryParams});
+}
+
+export function executeCommonSearchTests(modelName, modelNamePlural, extraRouterLinks = 0) {
+  it('can get RouterLinks from template', () => {
+    let numRouterLinks = extraRouterLinks + 1 + 26 + mockConfig.data.attributes.allHabitats[modelName].length +
+      mockConfig.data.attributes.allColors[modelName].length + (mockConfig.data.attributes.allSeasons[modelName].length);
+    expect(routerLinks.length)
+      .toBe(numRouterLinks, `should have ${numRouterLinks} routerLinks`);
+    expect(routerLinks[0].stub.linkParams).toEqual([`/${modelNamePlural}`]);
+  });
+  it('should have top level buttons', async(() => {
+    let topButtonLabels = ['Show All', 'Search By Prominent Color', 'Search By Habitat',
+      'Search By Letter of Alphabet', 'Search By Common Name', 'Search By Season'];
+    testButtonPresence(topButtonLabels);
+  }));
+  it('should have all color buttons', async(() => {
+    let colorButtonLabels = mockConfig.data.attributes.allColors[modelName];
+    testButtonPresence(colorButtonLabels);
+  }));
+  it('should have all habitat buttons', async(() => {
+    let habitatButtonLabels = mockConfig.data.attributes.allHabitats[modelName]
+      .map(each => `find ${modelNamePlural} in a ${each} habitat`);
+    testButtonPresence(habitatButtonLabels);
+  }));
+  it('can navigate to Show All', () => {
+    testButtonPress(modelNamePlural, 'show all', {sortBy: 'common_name'});
+  });
+  it('can navigate to search by habitat', () => {
+    let habitat = mockConfig.data.attributes.allHabitats[modelName][0];
+    let label = `find ${modelNamePlural} in a ${habitat} habitat`;
+    testButtonPress(modelNamePlural, label, {sortBy: 'common_name', habitat: habitat});
+  });
+  it('can navigate to search by color', () => {
+    let color = mockConfig.data.attributes.allColors[modelName][0];
+    testButtonPress(modelNamePlural, color, {sortBy: 'common_name', color: color});
+  });
+  it('can navigate to search by season', () => {
+    let season = mockConfig.data.attributes.allSeasons[modelName][0];
+    testButtonPress(modelNamePlural, season,
+      {sortBy: 'common_name', season: season});
+  });
+  it('can navigate to search by letter', () => {
+    testButtonPress(modelNamePlural, 'a', {sortBy: 'common_name', commonNameWordStarting: 'a'});
+  });
+  it('can navigate to search by common name', fakeAsync(() => {
+    let inputString = 'A String';
+    testFormSubmission(modelNamePlural, inputString, '#commonNameField', '#commonNameSubmit',
+      {sortBy: 'common_name', commonName: inputString});
+  }));
 }

@@ -1,27 +1,41 @@
 import {titlecase} from "../dsb-utils";
+import {Medium} from "./medium";
+import {MapLocation} from "./mapLocation";
 
 export class Organism {
   public id: number;
   public commonName: string;
-  public genus: string;
-  public species: string;
-  public familyLatin: string;
-  public familyEnglish: string;
+  public scientificName: string;
   private _color: string;
-  public _habitat: string;
-  public photoFilename: string;
-  public photoText1: string;
-  public photoText2: string;
-  public photoDate: Date;
-  public videoFilename: string;
+  private _habitat: string;
+  private _season: string;
   public notes: string;
+  public quickFacts: string;
+  public media: Medium[];
+  public mapLocations: MapLocation[];
 
-  constructor(sourceObject?: any) {
+  constructor(sourceObject?: any, refMap?: any) {
     if (sourceObject) {
-      for (var key in sourceObject) {
-        this[key] = sourceObject[key];
+      this.id = sourceObject.id;
+      for (var key in sourceObject.attributes) {
+        this[key] = sourceObject.attributes[key];
+      }
+      let classMap = {media: Medium, mapLocations: MapLocation};
+      for (var key in sourceObject.relationships) {
+        if (sourceObject.relationships[key].data) {
+          this[key] = sourceObject.relationships[key].data
+            .map(each => new (classMap[key])(refMap.get(each.type).get(each.id)));
+        }
       }
     }
+  }
+
+  public sortedDisplayKeys() {
+    return (['commonName', 'scientificName', '_habitat', '_season', '_color', 'quickFacts', 'notes']);
+  }
+
+  public mediaNames() {
+    this.media.map(medium => medium.fileName);
   }
 
   pluralClassName() {
@@ -43,4 +57,28 @@ export class Organism {
   public get habitat() {
     return (this._habitat ? titlecase(this._habitat) : undefined);
   }
+
+  public habitats() {
+    return (this.habitat ? this.habitat.split(',') : ['None'])
+  }
+
+  public get season() {
+    return (this._season ? titlecase(this._season) : undefined);
+  }
+
+  public set season(value) {
+    this._season = value;
+  }
+
+  public get photoFilename() {
+    if (!this.media) return (undefined);
+    let medium = this.media.find(each => each.tagName == 'img');
+    return (medium ? medium.fileName : undefined);
+  }
+
+  public get exportMapLocations() {
+    return(this.mapLocations.map(each => [each.xPercentage,each.yPercentage]));
+  }
 }
+
+Object.defineProperty(Organism.prototype, 'exportMapLocations', {enumerable: true});

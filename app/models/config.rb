@@ -3,13 +3,13 @@ class Config < ApplicationRecord
   serialize :all_colors
   serialize :all_habitats
   serialize :all_sizes
-  serialize :all_blooming_period_months
+  serialize :all_seasons
 
   def record
-    self.all_colors = self.fetch_all_colors()
-    self.all_habitats = self.fetch_all_habitats()
-    self.all_sizes = self.fetch_all_sizes()
-    self.all_blooming_period_months = self.fetch_all_blooming_period_months()
+    self.all_colors = self.fetch_all_colors
+    self.all_habitats = self.fetch_all_habitats
+    self.all_sizes = self.fetch_all_sizes
+    self.all_seasons = self.fetch_all_seasons
     self.save
   end
 
@@ -28,19 +28,14 @@ class Config < ApplicationRecord
     result
   end
 
-  def fetch_all_blooming_period_months
-    in_order_months = ['january', 'february', 'march', 'april', 'may', 'june',
-                       'july', 'august', 'september', 'october', 'november', 'december']
+  def fetch_all_seasons
     result = Hash.new {|hash, key| hash[key] = Set.new}
     Organism.all.includes(:actable).each do |each|
-      if each.specific.respond_to?('blooming_period') && each.specific.blooming_period
-        result[each.specific.class.name].merge(each.specific.blooming_period.split(',').collect(&:strip))
+      if each.specific.season
+        result[each.specific.class.name].merge(each.specific.season.split(',').collect(&:strip))
       end
     end
-    result.keys.clone.each {|key|
-      result[key] = result[key].to_a
-                        .sort_by {|month| in_order_months.index(month.downcase).to_i}
-    }
+    result.keys.clone.each {|key| result[key] = result[key].to_a.sort}
     result
   end
 

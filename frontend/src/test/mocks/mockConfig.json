@@ -1,34 +1,170 @@
 {
-  "id": 1,
-  "allColors": {
-    "amphibian": ["red", "green", "blue"],
-    "bird": ["red", "green", "blue"],
-    "fish": ["red", "green", "blue"],
-    "flower": ["red", "green", "blue"],
-    "mammal": ["red", "green", "blue"],
-    "reptile": ["red", "green", "blue"],
-    "tree": ["red", "green", "blue"],
-    "organism": ["red", "green", "blue"]
-  },
-  "allHabitats": {
-    "amphibian": ["water", "woods", "open areas"],
-    "bird": ["water", "woods", "open areas"],
-    "fish": ["water", "woods", "open areas"],
-    "flower": ["water", "woods", "open areas"],
-    "mammal": ["water", "woods", "open areas"],
-    "reptile": ["water", "woods", "open areas"],
-    "tree": ["water", "woods", "open areas"],
-    "organism": ["water", "woods", "open areas"]
-  },
-  "allSizes": {
-    "bird": [{"queryValue": "small", "displayValue": "Sparrow or smaller"},
-      {"queryValue": "medium", "displayValue": "About Robin size"},
-      {"queryValue": "large", "displayValue": "Crow or larger"}],
-    "fish": [{"queryValue": "5 inches", "displayValue": "5 inches"},
-      {"queryValue": "8 inches", "displayValue": "8 inches"},
-      {"queryValue": "12 inches", "displayValue": "12 inches"}]
-  },
-  "allBloomingPeriodMonths": {
-    "flower": ["February","March","April","May","June","July","August","September"]
+  "data": {
+    "id": 1,
+    "type": "config",
+    "attributes": {
+      "allColors": {
+        "amphibian": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "bird": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "fish": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "flower": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "insect": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "mammal": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "reptile": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "tree": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "organism": [
+          "red",
+          "green",
+          "blue"
+        ]
+      },
+      "allHabitats": {
+        "amphibian": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "bird": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "fish": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "flower": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "insect": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "mammal": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "reptile": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "tree": [
+          "water",
+          "woods",
+          "open areas"
+        ],
+        "organism": [
+          "water",
+          "woods",
+          "open areas"
+        ]
+      },
+      "allSizes": {
+        "bird": [
+          {
+            "queryValue": "small",
+            "displayValue": "Sparrow or smaller"
+          },
+          {
+            "queryValue": "medium",
+            "displayValue": "About Robin size"
+          },
+          {
+            "queryValue": "large",
+            "displayValue": "Crow or larger"
+          }
+        ],
+        "fish": [
+          {
+            "queryValue": "5 inches",
+            "displayValue": "5 inches"
+          },
+          {
+            "queryValue": "8 inches",
+            "displayValue": "8 inches"
+          },
+          {
+            "queryValue": "12 inches",
+            "displayValue": "12 inches"
+          }
+        ]
+      },
+      "allSeasons": {
+        "amphibian": [
+          "spring",
+          "summer"
+        ],
+        "bird": [
+          "spring",
+          "summer"
+        ],
+        "fish": [
+          "spring",
+          "summer"
+        ],
+        "flower": [
+          "spring",
+          "summer"
+        ],
+        "insect": [
+          "spring",
+          "summer"
+        ],
+        "mammal": [
+          "spring",
+          "summer"
+        ],
+        "reptile": [
+          "spring",
+          "summer"
+        ],
+        "tree": [
+          "spring",
+          "summer"
+        ],
+        "organism": [
+          "spring",
+          "summer"
+        ]
+      }
+    }
   }
 }

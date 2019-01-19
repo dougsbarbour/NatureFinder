@@ -17,7 +17,7 @@ export class FishSearchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.allSizes$ = this.apiService.config.pipe(map(config => config.allSizes['fish']));
+    this.allSizes$ = this.apiService.config.pipe(map(config => config.data.attributes.allSizes['fish']));
   }
 
   public get sortBy() {

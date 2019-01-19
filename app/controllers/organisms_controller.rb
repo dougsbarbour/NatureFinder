@@ -1,40 +1,22 @@
 class OrganismsController < ApplicationController
 
-  # GET /organisms
-  def index
-    @organisms = Organism.all
-
-    render json: @organisms
-  end
-
   # GET /organisms/1
   def show
-    render json: @organism
-  end
-
-  # POST /organisms
-  def create
-    @organism = Organism.new(organism_params)
-
-    if @organism.save
-      render json: @organism, status: :created, location: @organism
-    else
-      render json: @organism.errors, status: :unprocessable_entity
-    end
+    render json: serializer.new(@organism)
   end
 
   # PATCH/PUT /organisms/1
   def update
-    if @organism.update(organism_params)
-      render json: @organism
-    else
-      render json: @organism.errors, status: :unprocessable_entity
+    authenticate_request
+    if @current_user
+      p = base_params
+      p[:map_locations] = p[:map_locations].map {|each| MapLocation.new(each)} if p[:map_locations]
+      if @organism.update(p)
+        render json: serializer.new(@organism)
+      else
+        render json: @organism.errors, status: :unprocessable_entity
+      end
     end
-  end
-
-  # DELETE /organisms/1
-  def destroy
-    @organism.destroy
   end
 
   def import
@@ -43,9 +25,14 @@ class OrganismsController < ApplicationController
 
   private
 
+  def serializer
+    OrganismSerializer
+  end
+
   def permitted_params
-    [:common_name, :genus, :species, :family, :family_latin, :family_english, :color, :habitat, :photo_filename, :photo_date,
-     :video_filename, :notes, :common_name_word_starting, :sort_by]
+    [:common_name, :scientific_name, :color, :habitat, :season,
+     :media, :notes, :common_name_word_starting, :sort_by,
+    :id, {:map_locations => [:x_percentage, :y_percentage]}]
   end
 
   def base_params
@@ -58,7 +45,7 @@ class OrganismsController < ApplicationController
   end
 
   def like_keys
-    ['common_name', 'genus', 'species', 'family', 'family_latin', 'family_english', 'color', 'habitat', 'common_name_word_starting']
+    ['common_name', 'color', 'habitat', 'season', 'common_name_word_starting']
   end
 
   def process_params(models)
@@ -74,7 +61,8 @@ class OrganismsController < ApplicationController
     if base_params['sort_by']
       models = models.includes(:organism).order('organisms.' + base_params['sort_by'])
     end
-    return models
+    models = models.includes(organism: [:media, :map_locations])
+    return models.to_a
   end
 
 end

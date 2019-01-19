@@ -62,3 +62,116 @@ img {
 .card-img-top {
   text-align: center;
 }
+.background {
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100vw;
+  height: 100vh;
+}
+.home-img {
+  max-height: 33vh;
+  max-width: 33vw;
+}
+.home-title {
+  position: absolute;
+  left: 5%;
+  top: 2%;
+  max-height: 20vh;
+  max-width: 90vw;
+}
+.games {
+  position: absolute;
+  left: 80%;
+  top: 70%;
+  max-height: 20vh;
+  max-width: 20vw;
+}
+.info {
+  position: absolute;
+  left: 60%;
+  bottom: 39.5%;
+}
+.history {
+  position: absolute;
+  left: 20%;
+  bottom: 50.5%;
+  max-height: 28vh;
+  max-width: 28vw;
+}
+.hikes {
+  position: absolute;
+  left: 85%;
+  bottom: 51%;
+}
+.explore {
+  position: absolute;
+  left: 38%;
+  bottom: 40%;
+}
+.trace {
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  max-height: 20vh;
+  max-width: 20vw;
+}
+.explore-img {
+  max-height: 27vh;
+  max-width: 27vw;
+}
+.row-1 {
+  position: absolute;
+  top: 10%;
+}
+.row-2 {
+  position: absolute;
+  top: 40%;
+}
+.row-3 {
+  position: absolute;
+  top: 70%;
+}
+.flowers {
+  position: absolute;
+  left: 16%;
+}
+.trees {
+  position: absolute;
+  left: 40%;
+}
+.mammals {
+  position: absolute;
+  left: 65%;
+}
+.reptiles {
+  position: absolute;
+  left: 30%;
+}
+.amphibians {
+  position: absolute;
+  left: 54%;
+}
+.fish {
+  position: absolute;
+  left: 78%;
+}
+.insects {
+  position: absolute;
+  left: 12%;
+  max-height: 30vh;
+  max-width: 30vw;
+}
+.birds {
+  position: absolute;
+  left: 85%;
+  top: 15%;
+  max-height: 30vh;
+  max-width: 30vw;
+}
+.back {
+  position: absolute;
+  left: 1%;
+  top: 85%;
+  max-height: 10vh;
+  max-width: 10vw;
+}

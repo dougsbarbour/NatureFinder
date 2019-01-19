@@ -3,46 +3,20 @@ class ReptilesController < OrganismsController
 
   # GET /reptiles
   def index
-    @reptiles = process_params(Reptile.all)
+    @organisms = process_params(Reptile.all)
 
-    render json: @reptiles
-  end
-
-  # GET /reptiles/1
-  def show
-    render json: @reptile
-  end
-
-  # POST /reptiles
-  def create
-    @reptile = Reptile.new(reptile_params)
-
-    if @reptile.save
-      render json: @reptile, status: :created, location: @reptile
-    else
-      render json: @reptile.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /reptiles/1
-  def update
-    if @reptile.update(reptile_params)
-      render json: @reptile
-    else
-      render json: @reptile.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /reptiles/1
-  def destroy
-    @reptile.destroy
+    render json: serializer.new(@organisms)
   end
 
   private
 
+  def serializer
+    ReptileSerializer
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_reptile
-    @reptile = Reptile.find(params[:id])
+    @organism = Reptile.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

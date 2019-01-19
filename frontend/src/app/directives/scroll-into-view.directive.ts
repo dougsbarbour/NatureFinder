@@ -18,7 +18,7 @@ export class ScrollIntoViewDirective {
     this.scrollIntoView$ = this.route.paramMap.pipe(map(paramMap => paramMap.get('id')),
       distinctUntilChanged(),
       map(itId => +itId),
-      filter(itId => this.itemId === itId),
+      filter(itId => +this.itemId === itId),
       tap(() => this.el.nativeElement.scrollIntoView()))
       .subscribe()
   }

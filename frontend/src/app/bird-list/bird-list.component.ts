@@ -9,12 +9,12 @@ import {OrganismListComponent} from "../organism-list/organism-list.component";
 })
 export class BirdListComponent extends OrganismListComponent {
 
-  public columns = [['commonName', 'genus', 'color', '@break@', 'size', 'species', 'habitat'], 'notes'];
-  public columnHeadings = [['Common Name', 'Genus', 'Color', '@break@', 'Size', 'Species', 'Habitat'], 'Additional Information'];
+  public columns = [['commonName', 'habitat', 'color', '@break@', 'scientificName', 'size'], 'notes'];
+  public columnHeadings = [['Common Name', 'Habitat', 'Color', '@break@', 'Scientific Name', 'Size'], 'Additional Information'];
   public columnWidths = [
     {
       superWidth: 'col-sm-8',
-      subWidths: ['col-sm-5', 'col-sm-3', 'col-sm-4', 'w-100', 'col-sm-5', 'col-sm-3', 'col-sm-4']
+      subWidths: ['col-sm-5', 'col-sm-3', 'col-sm-4', 'w-100', 'col-sm-5', 'col-sm-5']
     },
     'col-sm-3 pre-line'
   ];
@@ -22,6 +22,6 @@ export class BirdListComponent extends OrganismListComponent {
   ngOnInit() {
     this.modelName = 'bird';
     super.ngOnInit();
-    this.setRowsObservable(each => new Bird(each));
+    this.setRowsObservable((each, included) => new Bird(each, included));
   }
 }

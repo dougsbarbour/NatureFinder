@@ -25,4 +25,7 @@ export class ActivatedRouteStub {
   set queryParams(params: Params) {
     this._queryParamMap.next(convertToParamMap(params));
   };
+  get snapshot() {
+    return({data: {}, queryParams: {sortBy: 'common_name'}});
+  }
 }

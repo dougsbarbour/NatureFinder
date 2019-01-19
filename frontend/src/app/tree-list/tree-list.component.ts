@@ -9,15 +9,20 @@ import {Tree} from "../models/tree";
 })
 export class TreeListComponent extends OrganismListComponent {
 
-  public columnHeadings = [['Common Name', '@break@', 'Genus'], ['Deciduous or Evergreen', 'Opposite or Alternate',
+  public columnHeadings = [[], ['Common Name', '@break@', 'Scientific Name'],
+    ['Deciduous or Evergreen', 'Opposite or Alternate',
     'Simple or Compound', 'Broad or Needle']];
   public columnWidths = [
     {
-      superWidth: 'col-sm-4',
+      superWidth: 'col-sm-1',
+      subWidths: []
+    },
+    {
+      superWidth: 'col-sm-3',
       subWidths: ['col-sm-12', 'w-100', 'col-sm-12']
     },
     {
-      superWidth: 'col-sm-7',
+      superWidth: 'col-sm-8',
       subWidths: ['col-sm-3 text-center', 'col-sm-3 text-center', 'col-sm-3 text-center', 'col-sm-3 text-center']
     }
   ];
@@ -25,7 +30,7 @@ export class TreeListComponent extends OrganismListComponent {
   ngOnInit() {
     this.modelName = 'tree';
     super.ngOnInit();
-    this.setRowsObservable(each => new Tree(each));
+    this.setRowsObservable((each, included) => new Tree(each, included));
   }
   navigateTo(model) {
     this.router.navigate(['/' + this.modelNamePlural + '/' + model.id], {queryParamsHandling: "preserve"})

@@ -10,12 +10,12 @@ import {baseImagePrefix} from "../dsb-utils";
 })
 export class FishListComponent extends OrganismListComponent {
 
-  public columns = [['commonName', 'genus', 'familyEnglish', '@break@', 'size', 'species', 'habitat'], 'notes'];
-  public columnHeadings = [['Common Name', 'Genus', 'Family', '@break@', 'Average Size', 'Species', 'Habitat'], 'Additional Info'];
+  public columns = [['commonName', 'habitat', '@break@', 'scientificName', 'size'], 'notes'];
+  public columnHeadings = [['Common Name', 'Habitat', '@break@', 'Scientific Name', 'Average Size'], 'Additional Info'];
   public columnWidths = [
     {
       superWidth: 'col-sm-8',
-      subWidths: ['col-sm-5', 'col-sm-3', 'col-sm-4', 'w-100', 'col-sm-5', 'col-sm-3', 'col-sm-4']
+      subWidths: ['col-sm-6', 'col-sm-6', 'w-100', 'col-sm-6', 'col-sm-6']
     },
     'col-sm-3 pre-line'
   ];
@@ -25,6 +25,6 @@ export class FishListComponent extends OrganismListComponent {
     super.ngOnInit();
     this.modelNamePlural = this.modelName;
     this.imagePrefix = baseImagePrefix + this.modelNamePlural + '/';
-    this.setRowsObservable(each => new Fish(each));
+    this.setRowsObservable((each, included) => new Fish(each, included));
   }
 }

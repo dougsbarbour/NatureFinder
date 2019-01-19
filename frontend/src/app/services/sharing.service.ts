@@ -10,20 +10,30 @@ import {baseAudioPrefix, baseImagePrefix, baseVideoPrefix} from "../dsb-utils";
 export class SharingService {
 
   public latestListQueryIds: string[];
-  public model;
+  public _model;
   public afterModelInit = () => {};
-  public sortBy = 'commonName';
+  public sortBy = 'common_name';
   public routeParams;
   public availableSortByKeys = {
-    amphibian: ['commonName', 'habitat'],
-    bird: ['commonName', 'color', 'habitat', 'size'],
-    fish: ['commonName', 'habitat', 'size'],
-    flower: ['commonName', 'color'],
-    mammal: ['commonName', 'habitat'],
-    reptile: ['commonName', 'habitat'],
-    tree: ['commonName']
+    amphibian: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    bird: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    fish: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    flower: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    insect: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    mammal: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    organism: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    reptile: ['common_name', 'habitat', 'scientific_name', 'color', 'season'],
+    tree: ['common_name', 'habitat', 'scientific_name', 'color', 'season']
   };
   public mapLocationButtonHidden = false;
+
+  get model() {
+    return(this._model);
+  }
+
+  set model(m) {
+    this._model = m;
+  }
 
   constructor(private apiService: ApiService) {
   }
@@ -33,20 +43,6 @@ export class SharingService {
       return (this.imagePrefix() + photoFilename);
     else
       return (this.imagePrefix() + commonName + '.jpg');
-  }
-
-  public secondaryImageFilename() {
-    let result;
-    if (this.model.femalePhotoType) {
-      result = this.imageFilenameMatching().split('.');
-      if (this.model.femalePhotoType == 'Juvenile')
-        result[result.length - 2] = result[result.length - 2].replace(/.$/, "j");
-      else
-        result[result.length - 2] = result[result.length - 2].replace(/.$/, "f");
-      return (result.join('.'));
-    }
-    else
-      return ('');
   }
 
   public audioFilenameMatching(audioFilename, commonName) {
@@ -69,6 +65,7 @@ export class SharingService {
         switchMap((array: any[]) => {
           let [url, paramMap, queryParamMap] = array;
           this.routeParams = paramMap['params'];
+          if (url.length == 3) url.pop();
           return (this.apiService.get(url.join('/'), queryParamMap['params']))
         }),
         map(each => instanceFunction(each)),
@@ -93,6 +90,15 @@ export class SharingService {
   videoPrefix() {
     if (!this.model) return ("");
     return (baseVideoPrefix + this.model.pluralClassName().toLowerCase() + '/')
+  }
+
+  public getIncludedMap(includedArray) {
+    let map = new Map;
+    includedArray.forEach(each => {
+      if (!map.has(each.type)) map.set(each.type, new Map);
+      map.get(each.type).set(each.id, each);
+    })
+    return(map);
   }
 
 }

@@ -1,25 +1,22 @@
 <div class="organism-nav">
-  <div class="row">
+  <div class="row w-100">
     <div class="col-sm-2" *ngIf="isHomeButtonAvailable()">
-      <button class="btn btn-primary org-nav-btn" routerLink="/">Home</button>
+      <button class="btn btn-success org-nav-btn"  onclick="window.location.href = '/';">Start over</button>
     </div>
     <div class="col-sm-2" *ngIf="isGoBackButtonAvailable()">
-      <button class="btn btn-primary org-nav-btn" (click)="zoomOut()">Zoom Out (Go Back)</button>
-    </div>
-    <div class="col-sm-2">
-      <button class="btn btn-primary org-nav-btn" (click)="returnToSearch()">Return to Search</button>
+      <button class="btn btn-success org-nav-btn" (click)="goBack()">Go Back</button>
     </div>
     <div class="col-sm-2" [style.visibility]="goToMapLocationButtonVisibility()">
-      <button class="btn btn-primary org-nav-btn" (click)="goToMapLocation()">Go to Map Location</button>
-    </div>
-    <div class="col-sm-2">
-      <button class="btn btn-primary org-nav-btn" (click)="returnToList()">Return to List</button>
+      <button class="btn btn-success org-nav-btn" (click)="goToMapLocation()">Go to Map Location</button>
     </div>
     <div class="col-sm-2" [style.visibility]="previousButtonVisibility()">
-      <button class="btn btn-primary org-nav-btn" (click)="previousItem()">Prev</button>
+      <button class="btn btn-success org-nav-btn" (click)="previousItem()">Prev</button>
     </div>
     <div class="col-sm-2" [style.visibility]="nextButtonVisibility()">
-      <button class="btn btn-primary org-nav-btn" (click)="nextItem()">Next</button>
+      <button class="btn btn-success org-nav-btn" (click)="nextItem()">Next</button>
+    </div>
+    <div class="col-sm-2" [style.visibility]="logoutButtonVisibility()">
+      <button class="btn btn-success org-nav-btn" (click)="logout()">Sign Out</button>
     </div>
   </div>
 </div>

@@ -3,46 +3,20 @@ class TreesController < OrganismsController
 
   # GET /trees
   def index
-    @trees = process_params(Tree.all)
+    @organisms = process_params(Tree.all)
 
-    render json: @trees
-  end
-
-  # GET /trees/1
-  def show
-    render json: @tree
-  end
-
-  # POST /trees
-  def create
-    @tree = Tree.new(tree_params)
-
-    if @tree.save
-      render json: @tree, status: :created, location: @tree
-    else
-      render json: @tree.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /trees/1
-  def update
-    if @tree.update(tree_params)
-      render json: @tree
-    else
-      render json: @tree.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /trees/1
-  def destroy
-    @tree.destroy
+    render json: serializer.new(@organisms)
   end
 
   private
 
+  def serializer
+    TreeSerializer
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_tree
-    @tree = Tree.find(params[:id])
+    @organism = Tree.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

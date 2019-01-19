@@ -1,9 +1,10 @@
+.item-count {
+  height: 4%;
+}
 .scrollable {
-  display: flex;
-  flex: 1 1 0;
   flex-direction: column;
-  max-height: 66vh;
   overflow-y: scroll;
+  height: 89%;
 }
 
 .card-body {
@@ -33,7 +34,7 @@
   min-width: 80px;
 }
 
-.zoom {
-  height: 50px;
-  margin-top: 5px;
+.heading {
+  background-color: lightgray !important;
+  height: 7%;
 }

@@ -1,70 +1,31 @@
-<ng-container *ngIf="model$ | async as model">
-  <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-sm-7" *ngIf="!zoomType()">
-          <div class="row" *ngFor="let zoomRow of zooms">
-            <div class="col-sm-4" *ngFor="let zoomCol of zoomRow">
-              <div class="row">
-                <div class="col">
-                  <img class="zoom-image img-fluid" [src]="zoomImage(zoomCol)">
-                </div>
-                <div class="w-100"></div>
-                <div class="col text-center mt-3 mb-3">
-                  <button type="button" class="btn btn-primary" (click)="zoomTo(zoomCol)">{{zoomCol}} Zoom</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-7" *ngIf="zoomType()">
-          <img class="img-fluid zoomed-image" [src]="zoomImage(zoomType())">
-        </div>
-        <div class="col-sm-5">
-          <div class="row w-100" *ngFor="let field of fields let i = index">
-            <ng-container *ngIf="field == '@treeTypes@'">
-              <div class="row tree-types w-100 text-center mt-4">
-                <div class="col-sm-3">
-                  <p>Deciduous or Evergreen</p>
-                </div>
-                <div class="col-sm-3">
-                  <p>Opposite or Alternate</p>
-                </div>
-                <div class="col-sm-3">
-                  <p class="text-center">Simple or Compound</p>
-                </div>
-                <div class="col-sm-3">
-                  <p class="text-center">Broad or Needle</p>
-                </div>
-              </div>
-              <div class="row w-100 text-center">
-                <div class="col-sm-3">
-                  <img [src]="model.iconForTreeType()">
-                </div>
-                <div class="col-sm-3">
-                  <img class="mx-auto" [src]="model.iconForLeafPosition()">
-                </div>
-                <div class="col-sm-3">
-                  <img class="mx-auto" [src]="model.iconForLeafStructure()">
-                </div>
-                <div class="col-sm-3">
-                  <img class="mx-auto" [src]="model.iconForLeafType()">
-                </div>
-              </div>
-            </ng-container>
-            <div class="col" *ngIf="field != '@treeTypes@'">
-              <h4>{{fieldHeadings[i]}}</h4>
-            </div>
-            <div class="w-100"></div>
-            <div class="col ml-5 mb-2">
-              <h5 class="pre-line text-center">{{model[field]}}</h5>
-            </div>
-          </div>
-        </div>
+  <ng-template #treeViewCustom let-model="model">
+    <div class="row tree-types w-100 text-center mt-4">
+      <div class="col-sm-3">
+        <p>Deciduous or Evergreen</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Opposite or Alternate</p>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center">Simple or Compound</p>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center">Broad or Needle</p>
       </div>
     </div>
-    <div class="card-footer">
-      <app-organism-navigation [model]="model"></app-organism-navigation>
+    <div class="row w-100 text-center">
+      <div class="col-sm-3">
+        <img [src]="model.iconForTreeType()">
+      </div>
+      <div class="col-sm-3">
+        <img class="mx-auto" [src]="model.iconForLeafPosition()">
+      </div>
+      <div class="col-sm-3">
+        <img class="mx-auto" [src]="model.iconForLeafStructure()">
+      </div>
+      <div class="col-sm-3">
+        <img class="mx-auto" [src]="model.iconForLeafType()">
+      </div>
     </div>
-  </div>
-</ng-container>
+  </ng-template>
+  <app-organism-view [domainClass]="treeClass()" [customTemplate]="treeViewCustom"></app-organism-view>
