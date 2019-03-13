@@ -1,5 +1,6 @@
 .item-count {
   height: 4%;
+  min-height: 2em;
 }
 .scrollable {
   flex-direction: column;
@@ -37,4 +38,5 @@
 .heading {
   background-color: lightgray !important;
   height: 7%;
+  min-height: 4em;
 }

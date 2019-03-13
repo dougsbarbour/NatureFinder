@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/two.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -33,6 +35,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/js/two.js",
+                  "with": "src/js/two.min.js"
                 }
               ],
               "optimization": true,
@@ -74,7 +80,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/js/two.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

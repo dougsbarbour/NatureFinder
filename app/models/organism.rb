@@ -3,7 +3,7 @@ require 'csv'
 class Organism < ApplicationRecord
   actable
   has_many :media, -> {order('id ASC')}
-  has_many :map_locations
+  has_many :map_locations, -> {order('id ASC')}
 
   validates_presence_of :common_name
 
@@ -87,4 +87,19 @@ class Organism < ApplicationRecord
     self.specific.sound_description = arg if self.specific.has_attribute?(:sound_description)
   end
 
+  def sorted_media
+    media.to_a.sort_by {|e| e.id}
+  end
+
+  def sorted_map_locations
+    map_locations.to_a.sort_by {|e| e.id}
+  end
+
+  def sort_media_ids
+    sorted_media.map {|each| each.id}
+  end
+
+  def sort_map_location_ids
+    sorted_map_locations.map {|each| each.id}
+  end
 end

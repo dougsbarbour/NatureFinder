@@ -4,8 +4,8 @@
       "id": 2,
       "type": "medium",
       "attributes": {
-        "fileName": "A String1",
-        "tagName": "A String2",
+        "fileName": "image.jpg",
+        "tagName": "img",
         "title": "A String3",
         "caption": "A String4",
         "credits": "A String5"
@@ -15,8 +15,8 @@
       "id": 3,
       "type": "medium",
       "attributes": {
-        "fileName": "A String1",
-        "tagName": "A String2",
+        "fileName": "audio.mp4",
+        "tagName": "audio",
         "title": "A String3",
         "caption": "A String4",
         "credits": "A String5"

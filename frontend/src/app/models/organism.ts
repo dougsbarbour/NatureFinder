@@ -1,4 +1,4 @@
-import {titlecase} from "../dsb-utils";
+import {baseAudioPrefix, baseImagePrefix, baseVideoPrefix, titlecase} from "../dsb-utils";
 import {Medium} from "./medium";
 import {MapLocation} from "./mapLocation";
 
@@ -70,15 +70,59 @@ export class Organism {
     this._season = value;
   }
 
+  public get displayMedia() {
+    return (this.media.filter(each => ['img', 'video'].includes(each.tagName)));
+  }
+
+  public get imagePrefix() {
+    return (baseImagePrefix + this.pluralClassName().toLowerCase() + '/')
+  }
+
+  public get audioPrefix() {
+    return (baseAudioPrefix + this.pluralClassName().toLowerCase() + '/')
+  }
+
+  public get videoPrefix() {
+    return (baseVideoPrefix + this.pluralClassName().toLowerCase() + '/')
+  }
+
   public get photoFilename() {
+    if (this.media) {
+      let medium = this.media.find(each => each.tagName == 'img');
+      return (medium ? this.imagePrefix + medium.fileName : undefined);
+    } else {
+      return (this.imagePrefix + this.commonName + '.jpg');
+    }
+  }
+
+  public get audioFilename() {
     if (!this.media) return (undefined);
-    let medium = this.media.find(each => each.tagName == 'img');
-    return (medium ? medium.fileName : undefined);
+    let medium = this.media.find(each => each.tagName == 'audio');
+    return (medium ? this.audioPrefix + medium.fileName : undefined);
+  }
+
+  public get audioCaption() {
+    if (!this.media) return (undefined);
+    let medium = this.media.find(each => each.tagName == 'audio');
+    return (medium ? medium.caption : undefined);
+  }
+
+  public get audioTitle() {
+    if (!this.media) return (undefined);
+    let medium = this.media.find(each => each.tagName == 'audio');
+    return (medium ? medium.title : undefined);
+  }
+
+  public get videoFilename() {
+    if (!this.media) return (undefined);
+    let medium = this.media.find(each => each.tagName == 'video');
+    return (medium ? this.videoPrefix + medium.fileName : undefined);
   }
 
   public get exportMapLocations() {
-    return(this.mapLocations.map(each => [each.xPercentage,each.yPercentage]));
+    return (this.mapLocations.map(each => [each.xPercentage, each.yPercentage]));
   }
+
 }
 
 Object.defineProperty(Organism.prototype, 'exportMapLocations', {enumerable: true});

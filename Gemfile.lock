@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/dougsbarbour/quick_random_records
+  revision: d492d317385d8d5fc884915e4dcfcc1275268586
+  branch: Add-table-name-qualifiers
+  specs:
+    quick_random_records (0.3.2)
+      activerecord (>= 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,10 +57,10 @@ GEM
       activerecord (>= 3.1.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (9.4.5)
+    autoprefixer-rails (9.4.8)
       execjs
     bcrypt (3.1.12)
-    bootstrap (4.2.1)
+    bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -204,7 +212,7 @@ DEPENDENCIES
   active_record-acts_as
   acts_as_singleton
   bcrypt (~> 3.1.7)
-  bootstrap (~> 4.2.1)
+  bootstrap (~> 4.3.1)
   byebug
   facets
   factory_bot_rails
@@ -216,6 +224,7 @@ DEPENDENCIES
   olive_branch
   pg (~> 0.18)
   puma (~> 3.0)
+  quick_random_records!
   rack-cors
   rails (~> 5.2.1)
   rest-client

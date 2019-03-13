@@ -15,7 +15,7 @@
         <div class="row w-100">
           <div class="col-sm-1">
             <img class="img-thumbnail mr-3 item-img"
-                 [src]="imageFilenameMatching(row.photoFilename,row.commonName)"
+                 [src]="row.photoFilename"
                  (click)="navigateTo(row)"
                  alt="">
           </div>

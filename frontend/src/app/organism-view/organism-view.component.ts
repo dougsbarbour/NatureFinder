@@ -20,19 +20,15 @@ export class OrganismViewComponent implements OnInit {
 
   ngOnInit() {
     this.model$ = this.shared.getModelObservable(this.acRoute,
-      (each => new this.domainClass(each.data, this.shared.getIncludedMap(each.included))).bind(this));
+      (each => new this.domainClass(each.data, this.shared.getIncludedMap(each.included))));
   }
 
-  imageFilenameMatching(...args: any[]) {
-    return (this.shared.imageFilenameMatching.apply(this.shared, args))
-  };
+  videoPlaying(carousel) {
+    carousel.pause();
+  }
 
-  audioFilenameMatching(...args: any[]) {
-    return (this.shared.audioFilenameMatching.apply(this.shared, args))
-  };
-
-  videoFilenameMatching(...args: any[]) {
-    return (this.shared.videoFilenameMatching.apply(this.shared, args))
-  };
+  videoEnded(carousel) {
+    carousel.cycle();
+  }
 
 }

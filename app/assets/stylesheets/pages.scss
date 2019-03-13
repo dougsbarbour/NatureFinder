@@ -1,41 +1,113 @@
-.pre-line {white-space: pre-line}
+@font-face {
+  font-family: MVBoli;
+  src: font_url('MVBoliV1.woff2') format('woff2');
+}
+
+div {
+  background-color: transparent !important;
+}
+
+.lighten {
+  background-color: rgba(#ffffff, 0.7) !important;
+  border-radius: 1rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+figure {
+  display: block;
+  margin: auto;
+}
+
+.figcaption-text {
+  font-family: MVBoli;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  transform: scale(0.75, 1);
+  color: #ffffbe;
+  text-shadow: -2px -2px 0 #225901,
+  2px -2px 0 #225901,
+  -2px 2px 0 #225901,
+  2px 2px 0 #225901;
+}
+
+figcaption {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+.page-title {
+  font-family: MVBoli;
+  font-size: 6rem;
+  transform: scale(0.75, 1);
+  transform-origin: left top;
+  color: #225901;
+  fill: #225901;
+  position: fixed;
+  left: 0;
+  top: 1rem;
+  width: 133.333%;
+  text-align: center;
+  text-shadow: 0 0 10px #ffffbe, 0 0 20px #ffffbe, 0 0 30px #ffffbe, 0 0 40px #ffffbe, 0 0 50px #ffffbe, 0 0 60px #ffffbe, 0 0 70px #ffffbe;
+}
+
+.pre-line {
+  white-space: pre-line
+}
+
 img {
   object-fit: contain;
 }
+
 .card-img-top {
   max-height: 65vh;
   max-width: 100%;
 }
+
 .btn {
   display: table;
   border-radius: 1rem;
   white-space: pre-wrap;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.15) 51%, rgba(0,0,0,0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2) 49%, rgba(0, 0, 0, 0.15) 51%, rgba(0, 0, 0, 0.05));
   background-repeat: repeat-x;
 }
+
 .btn text {
   display: table-cell;
   vertical-align: middle;
 }
+
 .welcome-btn {
   height: 21vh;
   width: 21vh;
   font-size: 4vh;
 }
+
 .info-btn {
   height: 15vh;
   width: 15vh;
   margin-bottom: 1rem;
   font-size: smaller;
 }
+
 .credits-btn {
   height: 8vh;
   width: 7vh;
 }
+
 .dangers-btn {
   height: 8vh;
   width: 8vh;
 }
+
 .search-btn {
   height: 12vh;
   width: 25vh;
@@ -44,34 +116,50 @@ img {
   font-size: 3.5vh;
   line-height: 95%;
 }
+
 .nav-btn {
   height: 10vh;
   width: 10vh;
   margin-top: 0;
   padding-top: 0;
 }
+
 .bottom-nav {
   bottom: 100vh;
   height: 12vh;
   overflow-y: hidden;
 }
+
 .full-page-card-body {
   height: 87vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
+
 .card-img-top {
   text-align: center;
 }
+
+body {
+  overflow: hidden;
+}
+
 .background {
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   width: 100vw;
   height: 100vh;
 }
+
 .home-img {
   max-height: 33vh;
-  max-width: 33vw;
+  max-width: 20vw;
 }
+
+.home-img img.scaled {
+  height: 100%;
+  width: 100%;
+}
+
 .home-title {
   position: absolute;
   left: 5%;
@@ -79,99 +167,115 @@ img {
   max-height: 20vh;
   max-width: 90vw;
 }
+
 .games {
   position: absolute;
-  left: 80%;
-  top: 70%;
-  max-height: 20vh;
-  max-width: 20vw;
+  left: 73%;
+  bottom: 40%;
+  max-width: 12vw;
 }
+
 .info {
   position: absolute;
-  left: 60%;
-  bottom: 39.5%;
+  max-width: 18vw;
+  left: 53%;
+  bottom: 40%;
 }
+
 .history {
   position: absolute;
   left: 20%;
   bottom: 50.5%;
   max-height: 28vh;
-  max-width: 28vw;
+  max-width: 15vw;
 }
+
 .hikes {
   position: absolute;
   left: 85%;
   bottom: 51%;
+  max-width: 12vw;
 }
+
 .explore {
   position: absolute;
-  left: 38%;
+  max-width: 18vw;
+  left: 33%;
   bottom: 40%;
 }
+
 .trace {
   position: absolute;
   left: 10%;
-  top: 70%;
+  bottom: 10%;
   max-height: 20vh;
-  max-width: 20vw;
+  max-width: 15vw;
 }
+
 .explore-img {
-  max-height: 27vh;
-  max-width: 27vw;
-}
-.row-1 {
   position: absolute;
+  max-width: 18vw;
+}
+
+.row-1 {
   top: 10%;
 }
+
 .row-2 {
-  position: absolute;
-  top: 40%;
+  top: 39%;
 }
+
 .row-3 {
-  position: absolute;
-  top: 70%;
+  top: 69%;
 }
+
 .flowers {
-  position: absolute;
   left: 16%;
+  max-width: 16vw;
 }
+
 .trees {
-  position: absolute;
   left: 40%;
 }
+
 .mammals {
-  position: absolute;
   left: 65%;
 }
+
 .reptiles {
-  position: absolute;
   left: 30%;
 }
+
 .amphibians {
-  position: absolute;
   left: 54%;
 }
+
 .fish {
-  position: absolute;
   left: 78%;
 }
+
 .insects {
-  position: absolute;
   left: 12%;
-  max-height: 30vh;
-  max-width: 30vw;
+  height: 10vh;
+  max-width: 12vw;
 }
+
 .birds {
-  position: absolute;
   left: 85%;
   top: 15%;
-  max-height: 30vh;
-  max-width: 30vw;
+  height: 12vh;
+  max-width: 12vw;
 }
+
 .back {
   position: absolute;
   left: 1%;
   top: 85%;
   max-height: 10vh;
   max-width: 10vw;
+}
+
+.game-button {
+  background: rgba(#225901, 0.8);
+  border-radius: 20px;
 }

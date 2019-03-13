@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: MVBoli;
+  src: url('assets/fonts/MVBoliV1.woff2') format('woff2');
+}
+
 div {
   background-color: transparent !important;
 }
@@ -101,14 +106,39 @@ audio {
   max-height: 27vh;
 }
 
-button, .search-header, .item-count {
-  font-family: 'Sriracha', cursive;
-  color: darkorange !important;
+button, .btn, .search-header, .item-count, .game-title-text {
+  font-family: 'MVBoli';
+  color: #ffffbe !important;
+  fill: #ffffbe !important;
   text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black;
+    -1px -1px 0 #225901,
+    1px -1px 0 #225901,
+    -1px 1px 0 #225901,
+    1px 1px 0 #225901;
+}
+
+.item-count {
+  font-family: 'MVBoli';
+  color: #ffffbe !important;
+  fill: #ffffbe !important;
+  text-shadow:
+    -1px -1px 0 #225901,
+    1px -1px 0 #225901,
+    -1px 1px 0 #225901,
+    1px 1px 0 #225901;
+}
+
+button, .btn {
+  background-color: darkgreen;
+}
+
+.no-text-shadow {
+  text-shadow: none !important;
+}
+
+.game-text {
+  color: rgb(34,89,1) !important;
+  fill: rgb(34,89,1) !important;
 }
 
 button {

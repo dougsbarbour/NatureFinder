@@ -29,6 +29,10 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     singleRun: false,
     files: [
-    ]
+      {pattern: "./test/fake-assets/**/*.jpg", included: false, served: true, watched: false},
+    ],
+    proxies: {
+      "/assets/": "/base/test/fake-assets/"
+    }
   });
 };

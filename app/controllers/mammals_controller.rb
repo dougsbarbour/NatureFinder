@@ -3,7 +3,7 @@ class MammalsController < OrganismsController
 
   # GET /mammals
   def index
-    @organisms = process_params(Mammal.all)
+    @organisms = process_params(Mammal.with_all.all)
 
     render json: serializer.new(@organisms)
   end
@@ -15,7 +15,7 @@ class MammalsController < OrganismsController
   end
   # Use callbacks to share common setup or constraints between actions.
   def set_mammal
-    @organism = Mammal.find(params[:id])
+    @organism = Mammal.with_all.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

@@ -1,4 +1,4 @@
-<div class="card border border-primary">
+<div class="card border border-success rounded-lg">
   <div class="card-body">
     <div class="row my-3" *ngFor="let fieldKey of fieldKeys()">
       <div class="col-sm-4">
@@ -11,5 +11,20 @@
     <ng-container *ngIf="customTemplate"
                   [ngTemplateOutlet]="customTemplate"
                   [ngTemplateOutletContext]="{model: model}"></ng-container>
+    <ng-container *ngIf="hasAudio()">
+      <div class="row  align-items-center">
+        <div class="col-sm-4">
+          <audio #audio appMediaWatch [endedAction]="audioEnded" [mediaControl]="playpause"
+                 [src]="model.audioFilename"></audio>
+          <span #playpause class="far fa-play-circle"
+                (click)="togglePlayPause(playpause, audio)">
+
+            </span>
+        </div>
+        <div class="col-sm-8">
+          <h5 class="my-auto">{{model.audioTitle}} : {{model.audioCaption}}</h5>
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>

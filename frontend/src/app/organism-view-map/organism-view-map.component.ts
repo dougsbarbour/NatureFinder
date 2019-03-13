@@ -114,20 +114,12 @@ export class OrganismViewMapComponent implements OnInit {
     });
   }
 
-  imagePrefix() {
-    return (this.shared.imagePrefix())
-  }
-
-  imageFilenameMatching(...args: any[]) {
-    return (this.shared.imageFilenameMatching.apply(this.shared, args))
-  }
-
   mergeImages() {
     let canvas: HTMLCanvasElement = this.mapCanvas.nativeElement;
     let context = canvas.getContext('2d');
     let imagePrefix = 'assets/images/';
     let model: Organism = this.shared.model;
-    let mapLegendLocation = [5, 35];
+    let mapLegendLocation = [5, 48];
     let baseImage = new Image();
     let icon = new Image();
 
@@ -142,7 +134,7 @@ export class OrganismViewMapComponent implements OnInit {
         context.drawImage(icon, baseImage.width * (mapLegendLocation[0] / 100),
           (baseImage.height * (mapLegendLocation[1] / 100)) - ((icon.height * aspectRatio) / 2),
           icon.width * aspectRatio, icon.height * aspectRatio);
-        context.font = "16px Georgia";
+        context.font = "40pt Georgia";
         context.textBaseline = "middle";
         context.fillText(`${model.pluralClassName()} Locations`,
           (iconWidth * 1.5) + (baseImage.width * (mapLegendLocation[0] / 100)),
@@ -156,7 +148,7 @@ export class OrganismViewMapComponent implements OnInit {
           });
         }
       };
-      icon.src = this.shared.imagePrefix() + 'map-icon.svg';
+      icon.src = model.imagePrefix + 'map-icon.svg';
     };
     baseImage.src = imagePrefix + this.baseMapImage;
   }

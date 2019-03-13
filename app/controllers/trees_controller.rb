@@ -3,7 +3,7 @@ class TreesController < OrganismsController
 
   # GET /trees
   def index
-    @organisms = process_params(Tree.all)
+    @organisms = process_params(Tree.with_all.all)
 
     render json: serializer.new(@organisms)
   end
@@ -16,7 +16,7 @@ class TreesController < OrganismsController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_tree
-    @organism = Tree.find(params[:id])
+    @organism = Tree.with_all.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

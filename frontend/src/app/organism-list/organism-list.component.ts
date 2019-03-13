@@ -84,13 +84,6 @@ export class OrganismListComponent implements OnInit {
     this.router.navigateByUrl('/' + this.modelNamePlural + '/add/' + id);
   }
 
-  public imageFilenameMatching(photoFilename, commonName) {
-    if (photoFilename)
-      return (this.imagePrefix + photoFilename);
-    else
-      return (this.imagePrefix + commonName + '.jpg');
-  }
-
   public sortBy(headingId) {
     this.router.navigate(['.'],
       {relativeTo: this.acRoute, queryParamsHandling: "merge", queryParams: {'sortBy': headingId}})

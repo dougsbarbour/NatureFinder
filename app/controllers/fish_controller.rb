@@ -3,7 +3,7 @@ class FishController < OrganismsController
 
   # GET /fish
   def index
-    @organism = process_params(Fish.all)
+    @organism = process_params(Fish.with_all.all)
     render json: serializer.new(@organism, is_collection: true)
   end
 
@@ -15,7 +15,7 @@ class FishController < OrganismsController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_fish
-    @organism = Fish.find(params[:id])
+    @organism = Fish.with_all.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

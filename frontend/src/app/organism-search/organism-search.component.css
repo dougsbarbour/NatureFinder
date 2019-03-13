@@ -1,2 +1,96 @@
-.keyboard-btn {width:40px;}
+.main {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-blend-mode: lighten;
+  background-color: rgba(255,255,255,0.6);
+}
 
+.lighten {
+  background-blend-mode: lighten;
+  background-color: rgba(255,255,255,0.5) !important;
+  border-radius: 1rem;
+}
+
+.text-button {
+  min-height: 4rem;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.tree-button {
+  height: 75px;
+  width: 90px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+figure {
+  display: table-cell;
+  height: 10rem;
+  width: 20vw;
+  padding-bottom: 1rem;
+  background-blend-mode: lighten;
+  background-color: rgba(255,255,255,0.5) !important;
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+
+}
+
+.figcaption-text {
+  font-family: MVBoli;
+  font-size: 2rem;
+  line-height: 2rem;
+  transform: scale(0.75, 1);
+  color: #ffffbe;
+  text-shadow: -2px -2px 0 #225901,
+  2px -2px 0 #225901,
+  -2px 2px 0 #225901,
+  2px 2px 0 #225901;
+}
+
+figcaption {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.btn-submit {
+  background-color: #ffffbe;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.5rem;
+}
+
+::ng-deep.tab-content {
+  height: 50vh !important;
+  max-width: 90% !important;
+  margin: auto !important;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+::ng-deep.nav-link {
+  display: inline-block !important;
+  padding-bottom: 0 !important;
+}
+
+::ng-deep.nav-link.active {
+  background-blend-mode: lighten !important;
+  background-color: rgba(255,255,255,0.5) !important;
+}
+
+::ng-deep.tab-pane {
+  width: 100% !important;
+}

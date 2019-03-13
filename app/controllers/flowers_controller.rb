@@ -3,7 +3,7 @@ class FlowersController < OrganismsController
 
   # GET /flowers
   def index
-    @organisms = process_params(Flower.all)
+    @organisms = process_params(Flower.with_all.all)
 
     render json: serializer.new(@organisms)
   end
@@ -16,7 +16,7 @@ class FlowersController < OrganismsController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_flower
-    @organism = Flower.find(params[:id])
+    @organism = Flower.with_all.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

@@ -28,9 +28,27 @@ export class OrganismDetailComponent implements OnInit {
     return(titlecase(splitCamelCase(str)))
   }
 
-  imageFilenameMatching(...args: any[]) {
-    return (this.shared.imageFilenameMatching.apply(this.shared, args))
-  };
+  hasAudio() {
+    return(this.model.audioFilename);
+  }
+
+  togglePlayPause(button, audioPlayer) {
+    if (audioPlayer.paused || audioPlayer.ended) {
+      button.classList.remove("fa-play-circle");
+      button.classList.add("fa-pause-circle");
+      audioPlayer.play();
+    }
+    else {
+      button.classList.remove("fa-pause-circle");
+      button.classList.add("fa-play-circle");
+      audioPlayer.pause();
+    }
+  }
+
+  audioEnded(button) {
+    button.classList.remove("fa-pause-circle");
+    button.classList.add("fa-play-circle");
+  }
 
 }
 

@@ -4,7 +4,7 @@ class BirdsController < OrganismsController
 
   # GET /birds
   def index
-    @organisms = process_params(Bird.all)
+    @organisms = process_params(Bird.with_all.all)
     render json: serializer.new(@organisms)
   end
 
@@ -16,7 +16,7 @@ class BirdsController < OrganismsController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_bird
-    @organism = Bird.find(params[:id])
+    @organism = Bird.with_all.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

@@ -6,7 +6,9 @@ import {map} from "rxjs/operators";
 import {DomSanitizer} from "@angular/platform-browser";
 import {ActivatedRoute, Router} from "@angular/router";
 import {SharingService} from "../services/sharing.service";
-import {splitCamelCase} from "../dsb-utils";
+import {baseImagePrefix, splitCamelCase} from "../dsb-utils";
+import {Tree} from "../models/tree";
+import {NgbTabChangeEvent} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-organism-search',
@@ -18,8 +20,9 @@ export class OrganismSearchComponent implements OnInit {
   public allColors$: Observable<any>;
   public allHabitats$: Observable<any>;
   public allSeasons$: Observable<any>;
+  public allSizes$: Observable<any>;
   public model: SearchModel = new SearchModel();
-  public allLetters = Array.from('abcdefghijklmnopqrstuvwxyz');
+  public tree = Tree; /*pseudo class */
   private defaultButtonBackgroundColor = 'tan';
   @Input() modelName = "";
   public modelNameSingular;
@@ -41,14 +44,28 @@ export class OrganismSearchComponent implements OnInit {
     this.allColors$ = this.apiService.config.pipe(map(config => config.data.attributes.allColors[this.modelNameSingular]));
     this.allHabitats$ = this.apiService.config.pipe(map(config => config.data.attributes.allHabitats[this.modelNameSingular]));
     this.allSeasons$ = this.apiService.config.pipe(map(config => config.data.attributes.allSeasons[this.modelNameSingular]));
+    this.allSizes$ = this.apiService.config.pipe(map(config => config.data.attributes.allSizes[this.modelNameSingular]));
   }
 
   splitCamelCase(arg) {
     return (splitCamelCase(arg));
   }
 
+  get imagePrefix() {
+    return(baseImagePrefix);
+  }
+
+  get modelImagePrefix() {
+    return(`${this.imagePrefix}${this.modelNamePlural}/`);
+  }
+
   get sortBy() {
     return(splitCamelCase(this.shared.availableSortByKeys[this.modelNameSingular][0]));
+  }
+
+  showAll() {
+    this.router.navigate(['/' + this.modelNamePlural],
+      {queryParams: {sortBy: this.sortBy}})
   }
 
   onSubmit(arg) {
@@ -98,5 +115,10 @@ export class OrganismSearchComponent implements OnInit {
     return (color.split(/\/|-/));
   }
 
+  beforeChange($event: NgbTabChangeEvent) {
+    if ($event.nextId === 'show-all') {
+      $event.preventDefault();
+      this.showAll();
+    }
+  }
 }
-

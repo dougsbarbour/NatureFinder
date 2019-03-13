@@ -127,7 +127,7 @@ export function testFormSubmission(modelNamePlural, inputString, fieldId, submit
 
 export function executeCommonSearchTests(modelName, modelNamePlural, extraRouterLinks = 0) {
   it('can get RouterLinks from template', () => {
-    let numRouterLinks = extraRouterLinks + 1 + 26 + mockConfig.data.attributes.allHabitats[modelName].length +
+    let numRouterLinks = extraRouterLinks + 1 + mockConfig.data.attributes.allHabitats[modelName].length +
       mockConfig.data.attributes.allColors[modelName].length + (mockConfig.data.attributes.allSeasons[modelName].length);
     expect(routerLinks.length)
       .toBe(numRouterLinks, `should have ${numRouterLinks} routerLinks`);
@@ -135,7 +135,7 @@ export function executeCommonSearchTests(modelName, modelNamePlural, extraRouter
   });
   it('should have top level buttons', async(() => {
     let topButtonLabels = ['Show All', 'Search By Prominent Color', 'Search By Habitat',
-      'Search By Letter of Alphabet', 'Search By Common Name', 'Search By Season'];
+      'Search By Common Name', 'Search By Season'];
     testButtonPresence(topButtonLabels);
   }));
   it('should have all color buttons', async(() => {
@@ -163,9 +163,6 @@ export function executeCommonSearchTests(modelName, modelNamePlural, extraRouter
     let season = mockConfig.data.attributes.allSeasons[modelName][0];
     testButtonPress(modelNamePlural, season,
       {sortBy: 'common_name', season: season});
-  });
-  it('can navigate to search by letter', () => {
-    testButtonPress(modelNamePlural, 'a', {sortBy: 'common_name', commonNameWordStarting: 'a'});
   });
   it('can navigate to search by common name', fakeAsync(() => {
     let inputString = 'A String';

@@ -29,14 +29,14 @@ class ActiveSupport::TestCase
     assert_equal 'Quick Facts String', block.call(domain_object, 'quickFacts'.send(converter))
     assert_equal 'Notes String', block.call(domain_object, 'notes'.send(converter))
     assert_equal 'season1, season2', block.call(domain_object, 'season'.send(converter))
-    block.call(domain_object, 'media').each_with_index do |medium, index|
+    block.call(domain_object, 'sorted_media').each_with_index do |medium, index|
       assert_equal "Media File Name #{index + 1} String", block.call(medium, 'fileName'.send(converter))
       assert_equal "Media Tag Name #{index + 1} String", block.call(medium, 'tagName'.send(converter))
       assert_equal "Media Title #{index + 1} String", block.call(medium, 'title'.send(converter))
       assert_equal "Media Caption #{index + 1} String", block.call(medium, 'caption'.send(converter))
       assert_equal "Media Credits #{index + 1} String", block.call(medium, 'credits'.send(converter))
     end
-    block.call(domain_object, 'map_locations').each_with_index do |map_location, index|
+    block.call(domain_object, 'sorted_map_locations').each_with_index do |map_location, index|
       assert_equal index, block.call(map_location, 'xPercentage'.send(converter))
       assert_equal index, block.call(map_location, 'yPercentage'.send(converter))
     end

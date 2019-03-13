@@ -1,15 +1,12 @@
 import {NgModule} from '@angular/core';
 import {MammalListComponent} from "./mammal-list/mammal-list.component";
 import {TreeListComponent} from "./tree-list/tree-list.component";
-import {TreeSearchComponent} from "./tree-search/tree-search.component";
 import {Route, RouterModule, Routes} from "@angular/router";
 import {FishListComponent} from "./fish-list/fish-list.component";
 import {FlowerListComponent} from "./flower-list/flower-list.component";
 import {BirdListComponent} from "./bird-list/bird-list.component";
-import {BirdSearchComponent} from "./bird-search/bird-search.component";
 import {ReptileListComponent} from "./reptile-list/reptile-list.component";
 import {AmphibianListComponent} from "./amphibian-list/amphibian-list.component";
-import {FishSearchComponent} from "./fish-search/fish-search.component";
 import {TreeViewComponent} from "./tree-view/tree-view.component";
 import {LoginComponent} from "./login/login.component";
 import {OrganismViewComponent} from "./organism-view/organism-view.component";
@@ -24,6 +21,7 @@ import {InsectListComponent} from "./insect-list/insect-list.component";
 import {OrganismSearchComponent} from "./organism-search/organism-search.component";
 import {OrganismViewMapComponent} from "./organism-view-map/organism-view-map.component";
 import {Tree} from "./models/tree";
+import {MatchingGameComponent} from "./matching-game/matching-game.component";
 
 const routes: Route[] = [
   {path: 'login', component: LoginComponent},
@@ -32,11 +30,11 @@ const routes: Route[] = [
   {path: 'amphibians/:id', component: OrganismViewComponent, data: {domainClass: Amphibian}},
   {path: 'amphibians/:id/map', component: OrganismViewMapComponent, data: {domainClass: Amphibian}},
   {path: 'birds', component: BirdListComponent},
-  {path: 'birds/search', component: BirdSearchComponent},
+  {path: 'birds/search', component: OrganismSearchComponent, data: {modelName: 'bird'}},
   {path: 'birds/:id', component: OrganismViewComponent, data: {domainClass: Bird}},
   {path: 'birds/:id/map', component: OrganismViewMapComponent, data: {domainClass: Bird}},
   {path: 'fish', component: FishListComponent},
-  {path: 'fish/search', component: FishSearchComponent},
+  {path: 'fish/search', component: OrganismSearchComponent, data: {modelName: {singular: 'fish', plural: 'fish'}}},
   {path: 'fish/:id', component: OrganismViewComponent, data: {domainClass: Fish}},
   {path: 'fish/:id/map', component: OrganismViewMapComponent, data: {domainClass: Fish}},
   {path: 'flowers', component: FlowerListComponent},
@@ -56,9 +54,10 @@ const routes: Route[] = [
   {path: 'reptiles/:id', component: OrganismViewComponent, data: {domainClass: Reptile}},
   {path: 'reptiles/:id/map', component: OrganismViewMapComponent, data: {domainClass: Reptile}},
   {path: 'trees', component: TreeListComponent},
-  {path: 'trees/search', component: TreeSearchComponent},
+  {path: 'trees/search', component: OrganismSearchComponent, data: {modelName: 'tree'}},
   {path: 'trees/:id', component: TreeViewComponent},
   {path: 'trees/:id/map', component: OrganismViewMapComponent, data: {domainClass: Tree}},
+  {path: 'games/matching/:modelNamePlural/:leftType/:leftProperty/:rightType/:rightProperty', component: MatchingGameComponent}
 ];
 
 @NgModule({

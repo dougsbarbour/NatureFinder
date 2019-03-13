@@ -2,12 +2,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: lighten;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }
+
 .media-body {
   background-blend-mode: lighten;
-  background-color: rgba(255,255,255,0.8) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
+
+:focus {
+  outline: none;
+}
+
 .carousel {
   max-width: 50vw;
   min-width: 50vw;
@@ -15,39 +21,50 @@
   flex-shrink: 0;
   margin-right: 1vw;
 }
-.carousel-item img {
-  height: 70vh;
-  object-fit: contain;
-}
-.carousel-item{
-  overflow-y: visible;
-}
-.carousel-control-prev, .carousel-control-next {
-  width: 5%;
-}
-.carousel-inner {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-.carousel-indicators {
-  bottom: -5vh;
-}
-.carousel-indicators li {
-  background-color: rgba(255,0,0,.5);
-}
-.carousel-indicators .active {
-  background-color: #f00;
-}
+
 .carousel-caption {
   color: #f00;
   position: relative;
   left: auto;
   right: auto;
+  height: 10vh;
+}
+
+::ng-deep .carousel-item img, ::ng-deep .carousel-item video {
+  height: 70vh !important;
+  object-fit: contain !important;
+}
+
+::ng-deep .carousel-item {
+  overflow-y: visible !important;
+}
+
+::ng-deep .carousel-control-prev, ::ng-deep .carousel-control-next {
+  width: 5% !important;
+}
+
+::ng-deep .carousel-inner {
+  width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+::ng-deep .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+::ng-deep .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+::ng-deep.carousel-indicators {
+  bottom: -5vh !important;
+}
+
+::ng-deep .carousel-indicators li {
+  background-color: rgba(255, 0, 0, .5) !important;
+}
+
+::ng-deep .carousel-indicators .active {
+  background-color: #f00 !important;
 }

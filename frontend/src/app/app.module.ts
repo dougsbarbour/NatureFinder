@@ -6,7 +6,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {ApiService} from './services/api.service';
 import {BirdListComponent} from './bird-list/bird-list.component';
-import {BirdSearchComponent} from './bird-search/bird-search.component';
 import {OrganismListComponent} from "./organism-list/organism-list.component";
 import {OrganismRowComponent} from './organism-row/organism-row.component';
 import {OrganismHeadingComponent} from "./organism-heading/organism-heading.component";
@@ -17,8 +16,6 @@ import {AmphibianListComponent} from "./amphibian-list/amphibian-list.component"
 import {MammalListComponent} from "./mammal-list/mammal-list.component";
 import {ReptileListComponent} from "./reptile-list/reptile-list.component";
 import {TreeListComponent} from "./tree-list/tree-list.component";
-import {FishSearchComponent} from "./fish-search/fish-search.component";
-import {TreeSearchComponent} from "./tree-search/tree-search.component";
 import {AppRoutingModule} from './app-routing.module';
 import {SharingService} from "./services/sharing.service";
 import {OrganismNavigationComponent} from './organism-navigation/organism-navigation.component';
@@ -31,6 +28,11 @@ import {OrganismDetailComponent} from './organism-detail/organism-detail.compone
 import {OrganismViewComponent} from './organism-view/organism-view.component';
 import {InsectListComponent} from './insect-list/insect-list.component';
 import {OrganismViewMapComponent} from "./organism-view-map/organism-view-map.component";
+import {MediaWatchDirective} from './directives/media-watch.directive';
+import {MatchingGameComponent} from './matching-game/matching-game.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ImagePreloadDirective} from './directives/image-preload.directive';
+import {AutofocusDirective} from './directives/autofocus.directive';
 
 @NgModule({
   declarations: [
@@ -41,14 +43,11 @@ import {OrganismViewMapComponent} from "./organism-view-map/organism-view-map.co
     OrganismRowComponent,
     OrganismHeadingComponent,
     AmphibianListComponent,
-    BirdSearchComponent,
     BirdListComponent,
     FishListComponent,
-    FishSearchComponent,
     FlowerListComponent,
     MammalListComponent,
     ReptileListComponent,
-    TreeSearchComponent,
     TreeListComponent,
     TreeViewComponent,
     OrganismNavigationComponent,
@@ -56,13 +55,18 @@ import {OrganismViewMapComponent} from "./organism-view-map/organism-view-map.co
     ScrollIntoViewDirective,
     OrganismDetailComponent,
     OrganismViewComponent,
-    InsectListComponent
+    InsectListComponent,
+    MediaWatchDirective,
+    MatchingGameComponent,
+    ImagePreloadDirective,
+    AutofocusDirective,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    NgbModule
   ],
   providers: [AuthService, ApiService, SharingService, CSVService],
   bootstrap: [AppComponent]

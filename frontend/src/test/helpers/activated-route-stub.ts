@@ -12,6 +12,7 @@ export class ActivatedRouteStub {
   // and pump new values into the `paramMap` observable
   private _paramMap = new ReplaySubject<ParamMap>();
   private _queryParamMap = new ReplaySubject<ParamMap>();
+  private _snapshot = {data: {}, queryParams: {sortBy: 'common_name'}};
 
   /** The mock paramMap observable */
   get paramMap() {return(this._paramMap.asObservable())};
@@ -26,6 +27,6 @@ export class ActivatedRouteStub {
     this._queryParamMap.next(convertToParamMap(params));
   };
   get snapshot() {
-    return({data: {}, queryParams: {sortBy: 'common_name'}});
+    return(this._snapshot);
   }
 }

@@ -3,7 +3,7 @@ class InsectsController < OrganismsController
 
   # GET /insects
   def index
-    @organisms = process_params(Insect.all)
+    @organisms = process_params(Insect.with_all.all)
 
     render json: serializer.new(@organisms)
   end
@@ -16,7 +16,7 @@ class InsectsController < OrganismsController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_insect
-    @organism = Insect.find(params[:id])
+    @organism = Insect.with_all.find(params[:id])
   end
 
   def permitted_params

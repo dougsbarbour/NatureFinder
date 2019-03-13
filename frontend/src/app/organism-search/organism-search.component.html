@@ -1,140 +1,224 @@
-<div class="card card-default main">
+<div class="card card-default main"
+     [style.background-image]="'url(\'assets/images/' + modelNamePlural + '/search-background.jpg\')'">
   <div class="main-page">
     <div class="card-heading">
       <h3 class="search-header">Search {{modelNamePlural | titlecase}}</h3>
     </div>
     <div class="card-body" style="position:relative">
-      <div class="accordion" id="accordion">
-        <div class="card">
-          <div class="card-header" id="showAllHeader">
-            <div class="row">
-              <div class="col">
-                <button class="btn btn-success" [routerLink]="['/' + modelNamePlural]" aria-controls="showAll"
-                        [queryParams]="{ sortBy: sortBy }">
-                  Show All
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ng-content></ng-content>
-        <ng-container *ngIf="(allHabitats$ | async)?.length > 0 ">
-          <div class="card">
-            <div class="card-header" id="searchByHabitatHeader">
-              <button class="btn btn-success collapsed" data-toggle="collapse" data-target="#searchByHabitat"
-                      aria-expanded="false" aria-controls="searchByHabitat">
-                Search By Habitat
-              </button>
-            </div>
-            <div class="collapse" id="searchByHabitat" aria-labelledby="searchByHabitatHeader" data-parent="#accordion">
-              <div class="card-body">
-                <div class="row ml-5">
-                  <div class="col" *ngFor="let habitat of allHabitats$ | async">
-                    <a class="btn btn-success" [routerLink]="['/' + modelNamePlural]"
-                       [queryParams]="{ habitat: habitat, sortBy: sortBy }">
-                      Find {{modelNamePlural | titlecase}} in a {{habitat}} habitat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ng-container>
-        <ng-container *ngIf="(allColors$ | async)?.length > 0">
-          <div class="card">
-            <div class="card-header" id="searchByColorHeader">
-              <button class="btn btn-success collapsed" data-toggle="collapse" data-target="#searchByColor"
-                      aria-expanded="false" aria-controls="searchByColor">
-                Search By Prominent Color
-              </button>
-            </div>
-            <div class="collapse" id="searchByColor" aria-labelledby="searchByColorHeader" data-parent="#accordion">
-              <div class="card-body">
-                <div class="row ml-5 colors">
-                  <div class="col" *ngFor="let color of allColors$ | async">
-                    <a class="btn btn-success"
-                       [style.border-color]="colorButtonBorder(color)"
-                       [style.background-color]="colorButtonBackground(color)"
-                       [routerLink]="['/' + modelNamePlural]"
-                       [queryParams]="{ color: color, sortBy: sortBy }"
-                       [innerHTML]="colorButtonText(color)"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ng-container>
-        <ng-container *ngIf="(allSeasons$ | async)?.length > 0">
-          <div class="card">
-            <div class="card-header" id="searchBySeasonHeader">
-              <button class="btn btn-success collapsed" data-toggle="collapse" data-target="#searchBySeason"
-                      aria-expanded="false" aria-controls="searchBySeason">
-                Search By Season
-              </button>
-            </div>
-            <div class="collapse" id="searchBySeason" aria-labelledby="searchBySeasonHeader" data-parent="#accordion">
-              <div class="card-body">
-                <div class="row ml-5">
-                  <div class="col" *ngFor="let season of allSeasons$ | async">
-                    <a class="btn btn-success"
-                       [routerLink]="['/' + modelNamePlural]"
-                       [queryParams]="{ season: season, sortBy: sortBy }">{{season | titlecase}}</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ng-container>
-        <div class="card">
-          <div class="card-header" id="searchByLetterHeader">
-            <button class="btn btn-success collapsed" data-toggle="collapse" data-target="#searchByLetter"
-                    aria-expanded="false" aria-controls="searchByLetter">
-              Search By Letter of Alphabet
-            </button>
-          </div>
-          <div class="collapse" id="searchByLetter" aria-labelledby="searchByLetterHeader" data-parent="#accordion">
-            <div class="card-body">
-              <div class="row justify-content-center">
-                <ng-container *ngFor="let ltr of allLetters; index as i">
-                  <ng-container *ngIf="i == 13">
-                    <div class="w-100 d-none d-lg-block"></div>
-                  </ng-container>
-                  <div class="col">
-                    <a class="btn btn-success keyboard-btn" [routerLink]="['/' + modelNamePlural]"
-                       [queryParams]="{ commonNameWordStarting: ltr, sortBy: sortBy }">{{ltr}}</a>
-                  </div>
-                </ng-container>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="searchByCommonNameHeader">
-            <button class="btn btn-success collapsed" data-toggle="collapse" data-target="#searchByCommonName"
-                    aria-expanded="false" aria-controls="searchByCommonName">
-              Search By Common Name
-            </button>
-          </div>
-          <div class="collapse" id="searchByCommonName" aria-labelledby="searchByCommonNameHeader"
-               data-parent="#accordion">
-            <div class="card-body">
+      <ngb-tabset #t="ngbTabset" [justify]="'justified'" activeId="search-by-name" (tabChange)="beforeChange($event)">
+        <ngb-tab id="search-by-name">
+          <ng-template ngbTabTitle>
+            <figure (click)="t.select('search-by-name')">
+              <figcaption><span class="figcaption-text">Search By Name</span></figcaption>
+              <img [src]="imagePrefix + 'search-by-name.png'">
+            </figure>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="container-fluid lighten">
               <form #commonNameForm="ngForm" (ngSubmit)="onSubmit(commonNameForm.value)" class="ml-5">
-                <div class="form-group">
-                  <label for="commonNameField"><h5>Common Name</h5></label>
-                  <input type="text" class="form-control" id="commonNameField" required [(ngModel)]="model.commonName"
-                         name="commonName">
+                <div class="form-group row py-0">
+                  <label for="commonNameField" class="col-3 my-auto"><h5>Common Name</h5></label>
+                  <div class="col-8 my-auto pr-0">
+                    <input type="text" class="form-control" id="commonNameField" required [(ngModel)]="model.commonName"
+                           name="commonName" appAutofocus>
+                  </div>
+                  <div class="col-1 pl-0">
+                    <button type="submit" id="commonNameSubmit" class="btn-submit">
+                      <img [style.height.rem]="2.25" [src]="imagePrefix + 'search-icon.svg'">
+                    </button>
+                  </div>
                 </div>
-                <button type="submit" class="btn btn-success" id="commonNameSubmit">Search
-                </button>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="search-by-size" *ngIf="(allSizes$ | async)?.length > 0 ">
+          <ng-template ngbTabTitle>
+            <figure (click)="t.select('search-by-size')">
+              <figcaption><span class="figcaption-text">Search By Size</span></figcaption>
+              <img [src]="modelImagePrefix + 'search-by-size.png'" [default]="imagePrefix + 'search-by-size.png'">
+            </figure>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="container-fluid lighten">
+              <div class="row ml-5">
+                <div class="col mx-auto" *ngFor="let size of allSizes$ | async">
+                  <a class="btn text-button" [routerLink]="['/' + modelNamePlural]"
+                     [queryParams]="{ size: size.queryValue, sortBy: sortBy }">{{size.displayValue}}</a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="search-by-tree-attributes" *ngIf="modelNamePlural == 'trees'">
+          <ng-template ngbTabTitle>
+            <figure (click)="t.select('search-by-tree-attributes')">
+              <figcaption><span class="figcaption-text">Search By Tree Attributes</span></figcaption>
+              <img [src]="imagePrefix + 'search-by-tree-attribute.png'">
+            </figure>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="container-fluid lighten w-50">
+              <div class="row ml-5">
+                <div class="row w-100">
+                  <div class="col my-auto">
+                    <h5>Tree Type</h5>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.deciduousTreeTypeIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ treeType: tree.deciduousTreeTypeValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Deciduous</span></button>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.evergreenTreeTypeIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ treeType: tree.evergreenTreeTypeValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Evergreen</span></button>
+                  </div>
+                </div>
+                <div class="row w-100">
+                  <div class="col my-auto">
+                    <h5>Leaf Position</h5>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.oppositeLeafPositionIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ leafPosition: tree.oppositeLeafPositionValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Opposite</span></button>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.alternateLeafPositionIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ leafPosition: tree.alternateLeafPositionValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Alternate</span></button>
+                  </div>
+                </div>
+                <div class="row w-100">
+                  <div class="col my-auto">
+                    <h5>Leaf Structure</h5>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.simpleLeafStructureIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ leafStructure: tree.simpleLeafStructureValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Simple</span></button>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.compoundLeafStructureIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ leafStructure: tree.compoundLeafStructureValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Compound</span></button>
+                  </div>
+                </div>
+                <div class="row w-100">
+                  <div class="col my-auto">
+                    <h5>Leaf Type</h5>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.broadLeafTypeIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ leafType: tree.broadLeafTypeValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Broad Leaf</span></button>
+                  </div>
+                  <div class="col">
+                    <button class="btn tree-button"
+                            [style.background-image]="'url(' + tree.needleLeafTypeIconFilename() + ')'"
+                            [routerLink]="['/trees']"
+                            [queryParams]="{ leafType: tree.needleLeafTypeValue(), sortBy: sortBy }">
+                      <span class="tree-button-text">Needle</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="search-by-habitat" *ngIf="(allHabitats$ | async)?.length > 0 ">
+          <ng-template ngbTabTitle>
+            <figure (click)="t.select('search-by-habitat')">
+              <figcaption><span class="figcaption-text">Search By Habitat</span></figcaption>
+              <img [src]="imagePrefix + 'search-by-habitat.png'">
+            </figure>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="container-fluid lighten">
+              <div class="row ml-5">
+                <div class="col mx-auto" *ngFor="let habitat of allHabitats$ | async">
+                  <a class="btn text-button" [routerLink]="['/' + modelNamePlural]"
+                     [queryParams]="{ habitat: habitat, sortBy: sortBy }">
+                    Find {{modelNamePlural | titlecase}} in a {{habitat}} habitat</a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="search-by-color" *ngIf="(allColors$ | async)?.length > 0 ">
+          <ng-template ngbTabTitle>
+            <figure (click)="t.select('search-by-color')">
+              <figcaption><span class="figcaption-text">Search By Color</span></figcaption>
+              <img [src]="imagePrefix + 'search-by-color.png'">
+            </figure>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="container-fluid lighten">
+              <div class="row ml-5 colors">
+                <div class="col-4 mx-auto" *ngFor="let color of allColors$ | async; let i = index">
+                  <a class="btn text-button no-text-shadow"
+                     [style.border-color]="colorButtonBorder(color)"
+                     [style.background-color]="colorButtonBackground(color)"
+                     [routerLink]="['/' + modelNamePlural]"
+                     [queryParams]="{ color: color, sortBy: sortBy }"
+                     [innerHTML]="colorButtonText(color)"></a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="search-by-season" *ngIf="(allSeasons$ | async)?.length > 0 ">
+          <ng-template ngbTabTitle>
+            <figure (click)="t.select('search-by-season')">
+              <figcaption><span class="figcaption-text">Search By Season</span></figcaption>
+              <img [src]="imagePrefix + 'search-by-season.png'">
+            </figure>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="container-fluid lighten">
+              <div class="row ml-5">
+                <div class="col mx-auto" *ngFor="let season of allSeasons$ | async">
+                  <a class="btn text-button"
+                     [routerLink]="['/' + modelNamePlural]"
+                     [queryParams]="{ season: season, sortBy: sortBy }">{{season | titlecase}}</a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="show-all">
+          <ng-template ngbTabTitle>
+            <div class="row">
+              <div class="col">
+                <figure>
+                  <figcaption><span class="figcaption-text">Show All</span></figcaption>
+                  <img [src]="imagePrefix + 'search-show-all.png'">
+                </figure>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template ngbTabContent></ng-template>
+        </ngb-tab>
+      </ngb-tabset>
     </div>
     <div class="bottom-nav">
       <div class="row">
         <div class="col-sm-2">
-          <button class="btn btn-success org-nav-btn" onclick="window.location.href = '/';">Start over</button>
+          <button class="btn org-nav-btn" onclick="window.location.href = '/';">Start over</button>
         </div>
       </div>
     </div>
